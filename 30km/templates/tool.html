@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero3 Green Block -->
+<section class="hero3-section">
+    <h1 class="hero3-title1">Urban growth speeds up,</h1>
+    <h1 class="hero3-title2">
+        <span class="highlight5">we shouldn’t.</span>
+    </h1>
+</section>
+
+<section class="body6-content">
+    <h2 class="body6-title">Let us inspire you</h2>
+    <p class="body6-text">
+        The city matching tool helps you discover real-world examples of <strong>successful 30km/h policy implementation</strong> that mirror your own city. By answering a few questions, you'll receive a match from our selection of <strong>11 European cities</strong>, along with a detailed recommendation card.
+    </p>
+</section>
+
+<section class="body7-content">
+    <div class="body7-frame">
+        <h3 class="body7-title">Why to use this tool?</h3>
+        <p class="body7-text">
+            This tool is designed to inspire by showcasing real-life examples of 30 km/h policy implementations. Since such policies depend on each city's unique context, we offer tailored matches by connecting you with cities that share similar traits. This can help urban planners, citizens, and others explore context-specific inspiration for safer and more livable cities.
+        </p>
+    </div>
+</section>
+
+<div class="body8-content">
+    <h2 class="body8-title">How does it work?</h2>
+  
+    <img src="static/icons/manual.svg" alt="Manual Icon" class="manual-image">
+  
+    <div class="body8-manual-titles">
+        <ul>
+            <li>DESCRIBE YOUR CITY</li>
+            <li>FIND YOUR CITY MATCH</li>
+            <li>REVIEW YOUR MATCH</li>
+            <li>GET INSPIRED</li>
+        </ul>
+    </div>
+    <!-- 4 Manual Descriptions -->
+    <p class="manual-description desc-1">Answer questions about your city's characteristics through our interactive quiz</p>
+    <p class="manual-description desc-2">The algorithm will find a match for your city with an accuracy percentage</p>
+    <p class="manual-description desc-3">Explore detailed insights about your matched city via the recommendation card</p>
+    <p class="manual-description desc-4">Use these insights to guide your local 30km/h implementation efforts</p>
+
+    <!-- Frame 1 -->
+    <div class="frame-1"></div>
+    <div class="frame-text-1">compare real-world examples</div>
+    <div class="frame-icon-1">
+        <img src="/static/icons/tick.svg" alt="icon" style="width: 20px; height: 20px;">
+    </div>
+
+    <!-- Frame 2 -->
+    <div class="frame-2"></div>
+    <div class="frame-text-2">learn from successful implementations</div>
+    <div class="frame-icon-2">
+        <img src="/static/icons/tick.svg" alt="icon" style="width: 20px; height: 20px;">
+    </div>
+
+    <!-- Frame 3 -->
+    <div class="frame-3"></div>
+    <div class="frame-text-3">get modular recommendations of best practices</div>
+    <div class="frame-icon-3">
+        <img src="/static/icons/tick.svg" alt="icon" style="width: 20px; height: 20px;">
+    </div>
+
+    <div class="match-button">Start</div>
+</div>
+  
+{% endblock %}

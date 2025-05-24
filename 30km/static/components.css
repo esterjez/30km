@@ -1,0 +1,134 @@
+/* buttons on landing page */
+
+.wide-button {
+    width: 1440px;
+    height: 120px;
+    background-color: #EC9A74;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.wide-button:hover {
+    background-color: #d98c68;
+}
+
+.wide-button span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: black;
+}
+
+.arrow {
+    font-size: 50px;
+    color: black;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tool button in navbar */
+.tool-button {
+    width: 240px;
+    height: 42px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43.75px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tool-button:hover {
+    background-color: white;
+    color: #262323;
+}
+.tool-button-about {
+    width: 240px;
+    height: 42px;
+    border: 2px solid black; /* Changed border color from white to black */
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43.75px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tool-button-about:hover {
+    background-color: white;
+    color: white;
+}
+
+/* --- Video Section --- */
+.video1-section {
+    width: 100%;
+    height: 263px;
+    background-color: #262323;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-crop {
+    position: absolute;
+    top: -370px; /* Shift the video up to crop more from the top */
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.video-crop video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.match-button {
+    position: absolute;
+    width: 244px;
+    height: 65px;
+    left: 598px;
+    top: 637px;
+    background: #7CB690;
+    border: 1px solid #000;
+    border-radius: 73px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 72px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

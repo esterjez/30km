@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        Widespread Implementation: As of 8 December 2023, the 30 km/h speed limit applies to 80% of Amsterdam's city roads.
+        <span class="source">(Source: NL Times)</span><br><br>
+        Enforcement in Action: Since June 2024, both fixed and mobile speed cameras have been deployed to monitor compliance.
+        <span class="source">(Source: NL Times)</span>
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='images/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='images/30.svg') }}" alt="30 icon">
+      <p class="p2">Slower Speeds, Safer Streets</p>
+      <p class="p3">
+        Average driving speed on affected roads dropped by 5%, now around 20 km/h. <br>
+        <span class="source">(Source: Amsterdam.nl)</span>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='images/transportation.png') }}" alt="Transportation icon">
+      <p class="p2">Minimal Delay, Big Impact</p>
+      <p class="p3">
+        Travel times increased by just 5%—roughly 30 seconds on a 10-minute trip. <br>
+        <span class="source">(Source: Amsterdam.nl)</span>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='images/community.svg') }}" alt="Community icon">
+      <p class="p2">Strong Community Support</p>
+      <p class="p3">
+        About 80% of residents back the new speed limit, with pedestrians and cyclists especially in favor. <br>
+        <span class="source">(Source: Child in the City)</span>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='images/neighborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Quieter, Calmer Neighborhoods</p>
+      <p class="p3">
+        Noticeable noise reduction and better conditions for walking and cycling—especially near schools and residential zones.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

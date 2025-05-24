@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Amsterdam</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space"></div>
+  <h2 class="body3-city-name">Amsterdam</h2>
+  <p class="body3-description">
+    A tourist historic city with a high pedestrian and cycling culture, average car ownership
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Medium<br>
+      Population density: Very High<br>
+      Transport accessibility: Very High<br>
+      Cycling infrastructure: Cycling-first<br>
+      Street layout: Narrow Historic<br>
+      Tourism levels: Very High<br>
+      Car ownership: Low<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">86%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          The main goal was to improve traffic safety:<br>
+          the city experienced around 4,800 accidents annually, four times the official police statistics
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve safety <br>
+            2. Decrease pollution <br>
+            3. Minimize noise
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          Empower residents through hands-on educational programs in schools, eye-catching public campaigns, and opportunities to take part in meaningful actions—like removing visual clutter from road signs.<br><br>
+          Transform awareness into action with smart solutions: redesign road markings and install dynamic digital signage to highlight new speed limits and encourage compliance.<br><br>
+          Pilot project and public awareness campaign to raise community support.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/reward.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Public awareness campaign:</strong> Launched the “30 for Everyone” initiative, featuring educational materials for schools, social media content, radio spots, and outdoor advertising. <em>NL Times + 3, Amsterdam.nl + 3, Child in the City + 3</em></p>
+        
+            <p class="p4"><strong>Infrastructure upgrades:</strong> Installed approximately 4,500 new road signs and modified 170 traffic lights to support enforcement of the new speed limit. <em>NL Times + 2, DutchNews.nl + 2</em></p>
+        
+            <p class="p4"><strong>Pilot project:</strong> Testing digital signs that react to vehicle noise levels in real time to raise driver awareness of noise pollution. <em>Cities Today</em></p>
+        
+            <p class="p4"><strong>Reward system in planning:</strong> Exploring a program that rewards drivers who follow speed limits by channeling funds into local community projects, such as playgrounds.</p>
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+
+{% endblock %}

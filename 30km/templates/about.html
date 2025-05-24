@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block navbar_class %}navbar-about{% endblock %}
+
+{% block tool_button %}
+  <a href="{{ url_for('tool') }}" class="tool-button-about">City categorisation tool</a>
+{% endblock %}
+
+{% block content %}
+<section class="hero4">
+  <div class="hero4-content">
+    <h1>Reimagining Safer Streets</h1>
+    <p>Together, we explore how European cities are implementing 30km/h speed limits for a safer and more livable future.</p>
+  </div>
+</section>
+
+{% endblock %}

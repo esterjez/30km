@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home – 30km/h City{% endblock %}
+
+{% block content %}
+
+<div class="hero1-section">
+    <div class="hero1-text h1">
+      <h1>
+        When Streets<br>
+        <span class="highlight1">Slow Down,</span><br>
+        Cities Come to Life
+      </h1>
+      <p class="hero1-text p">
+        Slower traffic is more than a safety measure — it’s a tool for transforming city streets into vibrant, people-first spaces.
+      </p>
+    </div>
+  </div>
+  
+
+<div class="body1-section">
+    <h2 class="body1-text">
+        This platform showcases how <span class="highlight2">30km/h speed limits</span> are transforming cities across Europe. By slowing down traffic, cities are making more room for pedestrians and cyclists, creating <span class="highlight3">safer environments for everyone.</span> Our goal is to <span class="highlight4">inspire</span> more cities to adopt these policies, improve urban life, and make streets safer for people, not just cars.
+    </h2>
+</div>
+
+<div class="video1-section">
+    <div class="video-crop">
+        <video autoplay muted loop playsinline>
+            <source src="{{ url_for('static', filename='media/video1.mov') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<section class="body2-section">
+    <div class="body2-column">
+        <img src="{{ url_for('static', filename='images/transportation.png') }}" alt="Transportation icon" class="body2-icon">
+      <p class="p2">Safer Streets for All</p>
+      <p class="p3">Lower speeds significantly reduce the risk of fatal accidents, especially for pedestrians, cyclists, and children. At 30 km/h, drivers have more time to react, and crashes are far less deadly.</p>
+    </div>
+    <div class="body2-column">
+        <img src="{{ url_for('static', filename='images/transportation.png') }}" alt="Transportation icon" class="body2-icon">
+      <p class="p2">More Livable Cities</p>
+      <p class="p3">Slower traffic means less noise and air pollution, making neighborhoods more pleasant and encouraging walking, cycling, and outdoor activity—supporting public health and well-being.</p>
+    </div>
+    <div class="body2-column">
+        <img src="{{ url_for('static', filename='images/transportation.png') }}" alt="Transportation icon" class="body2-icon">
+      <p class="p2">Stronger Communities</p>
+      <p class="p3">Calmer traffic fosters better social interaction, improves local business environments, and makes streets feel more welcoming. It’s a step toward more vibrant, people-centered urban spaces.</p>
+    </div>
+  </section>
+  
+  
+
+
+
+<!-- Bottom Wide Buttons -->
+<div class="bottom-buttons">
+    <a class="wide-button" href="{{ url_for('about') }}">
+        <span>About the policy</span>
+        <div class="arrow">➔</div>
+    </a>
+    <a class="wide-button" href="{{ url_for('amsterdam') }}">
+        <span>Amsterdam as blueprint</span>
+        <div class="arrow">➔</div>
+    </a>
+    <a class="wide-button" href="{{ url_for('tool') }}">
+        <span>Decision tool</span>
+        <div class="arrow">➔</div>
+    </a>
+</div>
+{% endblock %}

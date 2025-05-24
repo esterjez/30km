@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}30km City{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='components.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header class="{% block navbar_class %}navbar{% endblock %}">
+        <a href="{{ url_for('landing') }}" class="logo-link">
+            <div class="logo">LET’S TAPP IN</div>
+        </a>
+        <nav class="nav-links">
+            <a href="{{ url_for('landing') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('amsterdam') }}">Amsterdam</a>
+            {% block tool_button %}
+                <a href="{{ url_for('tool') }}" class="tool-button">City categorisation tool</a>
+            {% endblock %}
+
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 30km/h City Project</p>
+    </footer>
+    
+</body>
+</html>
+
+
