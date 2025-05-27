@@ -8,10 +8,266 @@
 
 {% block content %}
 <section class="hero4">
+  <img src="{{ url_for('static', filename='images/road1.svg') }}" alt="Illustration of a road" class="hero4-image">
+
   <div class="hero4-content">
-    <h1>Reimagining Safer Streets</h1>
-    <p>Together, we explore how European cities are implementing 30km/h speed limits for a safer and more livable future.</p>
+    <h1>Why 30 km/h?</h1>
+    <p class="hero4-subtitle">Slower streets, stronger communities.</p>
   </div>
+
+  <p class="hero4-description">
+    In more and more cities, the maximum speed on local roads is being lowered to 
+    <span class="highlight11">30 km/h</span>. Why? Because lower speeds make for 
+    <span class="highlight11">safer streets</span>, less noise and 
+    <span class="highlight11">more space for people</span> instead of cars.
+  </p>
+
+  <section class="frame-container">
+    <div class="frame11"></div>
+    <img src="{{ url_for('static', filename='icons/50to30.svg') }}" alt="Decorative graphic" class="fifty-to-thirty">
+  </section>
+</section>
+
+<section class="body11">
+  <h2>What do real-world results show?</h2>
+  <h3>Several European cities have implemented the 30 km/h policy, and the results speak for themselves:</h3>
+</section>
+
+<section class="city-facts">
+  <div class="city-fact">
+    <img src="{{ url_for('static', filename='icons/brussels.png') }}" alt="Brussels icon">
+    <h4><strong>Brussels</strong></h4>
+    <h4>saw a 25% reduction in serious traffic accidents since 2021.</h4>
+  </div>
+  <div class="city-fact">
+    <img src="{{ url_for('static', filename='icons/paris.png') }}" alt="Paris icon">
+    <h4><strong>Paris</strong></h4>
+    <h4>reduced traffic noise by an average of 3 decibels.</h4>
+  </div>
+  <div class="city-fact">
+    <img src="{{ url_for('static', filename='icons/amsterdam.png') }}" alt="Amsterdam icon">
+    <h4><strong>Amsterdam</strong></h4>
+    <h4>reports that 6 in 10 residents are positive about the introduction of 30 km/h.</h4>
+  </div>
+</section>
+
+<section class="body12">
+    <p class="highlight-text">
+    Although lowering the speed to 30 km/h often has the same benefits, <span class="highlight12">not every city has the same reason to implement this measure.</span>
+    Curious which city had which motivation? <span class="highlight12">Check out the table below!</span>
+    </p>
+</section>
+
+<section class="body12">
+<div class="table-container">
+  <table>
+      <thead>
+          <tr>
+              <th>Motivation</th>
+              <th>Explanation</th>
+              <th>Cities</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Less collisions & injuries</td>
+              <td>Breaking distance and collision impact vary highly nonlinearly with speed</td>
+              <td>Graz, Edinburgh, Madrid, Lille, Grenoble, Helsinki, Bilbao, Brussels, Paris, Barcelona, Lyon, Amsterdam</td>
+          </tr>
+          <tr>
+              <td>Less noise</td>
+              <td>Average reduction of 3 DB(A), equivalent to 50% less car traffic volume</td>
+              <td>Graz, Edinburgh, Bilbao, Brussels, Paris, Barcelona, Zürich, Lyon, Grenoble, Amsterdam</td>
+          </tr>
+          <tr>
+              <td>Less car traffic</td>
+              <td>Car usage becomes less attractive, intersection capacity decreases slightly</td>
+              <td>Lille, Amsterdam</td>
+          </tr>
+          <tr>
+              <td>More cycling & walking</td>
+              <td>Cycling and walking become safer & more comfortable, while car traffic is slower and reduced in volume</td>
+              <td>Edinburgh, Grenoble, Madrid, Paris, Lille, Barcelona, Lyon, Amsterdam</td>
+          </tr>
+          <tr>
+              <td>Less air pollution</td>
+              <td>A more continuous car traffic flow (less accelerations) reduces air pollution</td>
+              <td>Graz, Madrid, Lille</td>
+          </tr>
+          <tr>
+              <td>Improved health</td>
+              <td>Is expected to be a cause of more active mobility and less noise (stress)</td>
+              <td>Bilbao, Barcelona</td>
+          </tr>
+          <tr>
+              <td>Significance of public spaces</td>
+              <td>Public spaces become more attractive and used with less noise</td>
+              <td>Grenoble, Paris, Lyon, Montpellier, Amsterdam</td>
+          </tr>
+          <tr>
+              <td>Increased quality of life</td>
+              <td>Less danger, noise, stress; converting public spaces to other usages, better health, children are more independent</td>
+              <td>Edinburgh, Bilbao, Montpellier, Barcelona, Lyon, Amsterdam</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+</section>
+
+<section class="body13">
+  <h3 class="body13-title">What are the challenges?</h3>
+  <h4 class="body13-subtitle">Changing speed means changing mindset.</h4>
+
+  <div class="body13-image-wrapper">
+    <img src="static/images/road2a.svg" class="body13-road-a" />
+    
+    <div class="frame">
+      <p class="body13-description">Although the 30 km/h policy offers promising                                     benefits, its implementation     is <span class="highlight12">not without obstacles.</span> Here is an overview of                                  the main challenges faced.    </p>
+    </div>
+    
+    <img src="static/images/road2b.svg" class="body13-road-b" />
+  </div>
+
+  <div class="frame2">
+    <div class="frame2-card">
+      <img src="static/icons/analysis.png" alt="Analytics Icon" class="frame2-icon" />
+      <h3 class="frame2-title">Effect not always easy to measure</h3>
+      <p class="frame2-text">
+        Although local studies often show positive results, it is difficult to draw hard conclusions on a large scale. Many cities lack reliable data or good evaluation methods.
+      </p>
+    </div>
+  
+    <div class="frame2-card">
+      <img src="static/icons/road-sign.png" alt="Road Sign Icon" class="frame2-icon" />
+      <h3 class="frame2-title">Behavior does not change by itself</h3>
+      <p class="frame2-text">
+        A sign with “30” is not enough. Without enforcement or physical measures (such as speed bumps or narrowing), many drivers continue to display their old behavior.
+      </p>
+    </div>
+  
+    <div class="frame2-card">
+      <img src="static/icons/road-block.png" alt="Barrier Icon" class="frame2-icon" />
+      <h3 class="frame2-title" style="margin-bottom: 35px;">Lack of uniformity</h3>
+      <p class="frame2-text">
+        Each city approaches it differently. Some only use traffic signs, others combine it with street redesign. This makes it difficult to compare results.
+      </p>
+    </div>
+  
+    <div class="frame2-card">
+      <img src="static/icons/question.png" alt="Question Icon" class="frame2-icon" />
+      <h3 class="frame2-title">Doubts among residents</h3>
+      <p class="frame2-text" style="width: 290px;">
+        If expectations are raised too high, but the effects are only visible to a limited extent, this can lead to disappointment or resistance. Transparent communication about what can and cannot be expected is essential.
+      </p>
+    </div>
+  </div>
+
+  <h1 class="frame-headline">How to successfully implement the 30 km/h policy?</h1>
+  <p class="frame-subhead">
+    The transition to a city with a 30 km/h standard requires a smart and well-coordinated approach:
+  </p>
+</section>
+
+<section class="body14">
+  <div class="bubble-section-wrapper">
+
+    <div class="decorative-ellipse"></div>
+
+    <div class="bubble-wrapper">
+
+      <!-- Bubble 1 -->
+      <div class="bubble-card bubble-pos-1">
+        <div class="bubble-header">
+          <img src="static/icons/legal.png" alt="Legal Icon" class="bubble-icon" />
+          <h4 class="bubble-heading">Legal foundation</h4>
+        </div>
+        <p class="bubble-text">
+          It starts with setting up a solid legal framework. Existing traffic rules must be adjusted and coordinated with local authorities, transport services and the police.
+        </p>
+      </div>
+
+      <!-- Bubble 2 -->
+      <div class="bubble-card bubble-pos-2">
+        <div class="bubble-header">
+          <img src="static/icons/public.png" alt="Public Involvement Icon" class="bubble-icon" />
+          <h4 class="bubble-heading">Public involvement</h4>
+        </div>
+        <p class="bubble-text">
+          Creating support is crucial. Through clear campaigns with media, signs, flyers and neighbourhood meetings, citizens and politicians learn why this measure works. The better the explanation, the greater the support.
+        </p>
+      </div>
+
+      <!-- Bubble 3 -->
+      <div class="bubble-card bubble-pos-3">
+        <div class="bubble-header">
+          <img src="static/icons/bike.png" alt="Bike Icon" class="bubble-icon" />
+          <h4 class="bubble-heading">Stimulating active mobility</h4>
+        </div>
+        <p class="bubble-text">
+          A safe city is a city where people walk, cycle and take public transport. Investing in wider cycle paths, more public transport and car-free zones helps people to choose alternatives.
+        </p>
+      </div>
+
+      <!-- Bubble 4 -->
+      <div class="bubble-card bubble-pos-4">
+        <div class="bubble-header">
+          <img src="static/icons/traffic-jam.png" alt="Traffic Icon" class="bubble-icon" />
+          <h4 class="bubble-heading">Traffic calming measures</h4>
+        </div>
+        <p class="bubble-text">
+          Speed limiters such as speed bumps, raised intersections and narrower lanes ensure that 30 km/h is not just a sign, but the new norm on the streets.      </p>
+      </div>
+
+      <!-- Bubble 5 -->
+      <div class="bubble-card bubble-pos-5">
+        <div class="bubble-header">
+          <img src="static/icons/smart-car.png" alt="Smart Car Icon" class="bubble-icon" />
+          <h4 class="bubble-heading">Smart technology</h4>
+        </div>
+        <p class="bubble-text">
+          Intelligent Transport Systems (ITS) can help adjust traffic lights to traffic congestion. This makes the city safer and more efficient.    
+        </p>
+        </div>
+      </div>
+    </div>
+
+  <section class="guidance-frame1">
+    <div class="guidance-intro">
+      <p4>
+        The following guidance documents can support governments in the design and implementation of traffic calming
+        measures:
+      </p>
+    </div>
+  
+    <div class="guidance-frame2">
+      <p4>
+        <a href="https://www.roadsafetyfacility.org/low-speed-zone-guide" target="_blank">
+          Low-Speed Zone Guide
+        </a> developed by the Global Road Safety Facility (World Bank) and the World Resources Institute;
+      </p>
+      <p4>
+        <a href="https://globaldesigningcities.org/publication/global-street-design-guide/" target="_blank">
+          Global Street Design Guide
+        </a> developed by the Global Designing Cities Initiative;
+      </p>
+      <p4>
+        <a href="https://nacto.org/publication/city-limits/" target="_blank">
+          City Limits
+        </a> developed by the National Association of City Transportation Officials;
+      </p>
+      <p4>
+        <a href="https://toolkit.irap.org/" target="_blank">
+          Road Safety Toolkit
+        </a> developed by the International Road Assessment Programme (iRAP);
+      </p>
+      <p4>
+        <a href="https://www.roadsafetyfacility.org/resources/guide-determining-readiness-speed-cameras" target="_blank">
+          Guide for Determining Readiness for Speed Cameras and Other Automated Enforcement
+        </a> developed by the Global Road Safety Facility and the Global Road Safety Partnership.
+      </p>
+    </div>
+    </section>
+    
 </section>
 
 {% endblock %}
