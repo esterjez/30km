@@ -752,7 +752,6 @@
   color: #000000;
   max-width: 770px;
   margin-top: 50px;
-  margin: 50px 0 0 10px;
 }
 
 .body6-text {
@@ -771,7 +770,7 @@
   background: #7CB690;
   width: 100%;
   max-width: 1440px;
-  padding: 138px 90px 64px 90px;
+  padding: 100px 90px 64px 90px;
   box-sizing: border-box;
 }
 
