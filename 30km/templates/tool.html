@@ -2,6 +2,12 @@
 
 {% block title %}City Tool - 30km City{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylestool.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='maintool.css') }}">
+    <script src="{{ url_for('static', filename='quiz-with-tooltips.js') }}" defer></script>
+{% endblock %}
+
 {% block navbar_class %}navbar-result{% endblock %}
 
 {% block content %}
@@ -10,7 +16,7 @@
 <section class="hero3-section">
     <h1 class="hero3-title1">Urban growth speeds up,</h1>
     <h1 class="hero3-title2">
-        <span class="highlight5">we shouldn’t.</span>
+        <span class="highlight5">we shouldn't.</span>
     </h1>
 </section>
 
@@ -45,9 +51,9 @@
     </div>
     <!-- 4 Manual Descriptions -->
     <p class="manual-description desc-1">Answer questions about your city's characteristics through our interactive quiz</p>
-    <p class="manual-description desc-2">The algorithm will find a match for your city with an accuracy percentage</p>
-    <p class="manual-description desc-3">Explore detailed insights about your matched city via the recommendation card</p>
-    <p class="manual-description desc-4">Use these insights to guide your local 30km/h implementation efforts</p>
+    <p class="manual-description desc-2">The tool will find a European city that’s already tackled similar issues with a 30 km/h policy, and provide a match accuracy percentage</p>
+    <p class="manual-description desc-3">Learn how they did it: what worked, what preperation it took, and why it matters—through a custom city profile</p>
+    <p class="manual-description desc-4">Use these real-world insights to shape your own safer, calmer, and more human-centered streets</p>
 
     <!-- Frame 1 -->
     <div class="frame-1"></div>
@@ -70,7 +76,330 @@
         <img src="/static/icons/tick.svg" alt="icon" style="width: 20px; height: 20px;">
     </div>
 
-    <div class="match-button">Start</div>
+    <button id="start-quiz-main" class="match-button">Start</button> 
 </div>
-  
+
+<!-- Quiz section -->
+<section class="quiz-section">
+    <div id="quiz-app" class="quiz-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-text">
+                <span class="current-question">1</span> / <span class="total-questions">8</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                <div class="progress-steps">
+                    <div class="step" data-step="1"></div>
+                    <div class="step" data-step="8"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div class="results-container"></div>
+            <!-- Navigation Controls -->
+            <div class="navigation-controls">
+                <button class="nav-arrow left" aria-label="Previous question" disabled>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="nav-text">Previous</span>
+                </button>
+                <button class="nav-arrow right" aria-label="Next question">
+                    <span class="nav-text">Next</span>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="nav-arrow end-quiz" aria-label="End Quiz" style="display: none;">
+                    <span class="nav-text">End Quiz</span>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel">
+            <!-- Question 1: City Size -->
+            <div class="question-block active">
+                <div class="question-header">
+                    <h2 class="question-title">What is the current population of your city??</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Small">
+                        <div class="circle"></div>
+                        <h3>Small</h3>
+                        <p>Fewer than 500,000 people – typically walkable in a day, higher dependency on private transportation.</p>
+                    </div>
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>500,000 to 1 million – regional hubs with some sprawl.</p>
+                    </div>
+                    <div class="option" data-value="Large">
+                        <div class="circle"></div>
+                        <h3>Large</h3>
+                        <p>1 million to 3 million – Major national cities, may include expansive urban cores</p>
+                    </div>
+                    <div class="option" data-value="Metropolitan">
+                        <div class="circle"></div>
+                        <h3>Metropolitan</h3>
+                        <p>Over 3 million – dense, metropolitan cities with full-scale infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Question 2: Population Density -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">What is the population density?</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Low">
+                        <div class="circle"></div>
+                        <h3>Low</h3>
+                        <p>1,000-2,500 km² – low-rise buildings, spacious layout (eg. Ghent, Belgium; Aarhus, Denmark)</p>
+                    </div>
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>2,500-5,000 km² – mix of building heights and densities (eg. Munich, Germany; Lyon, France)</p>
+                    </div>
+                    <div class="option" data-value="High">
+                        <div class="circle"></div>
+                        <h3>High</h3>
+                        <p>3,500-5,000 km² – predominantly high-rise with some mixed areas (eg. Milan, Italy; Hamburg, Germany)</p>
+                    </div>
+                    <div class="option" data-value="Very High">
+                        <div class="circle"></div>
+                        <h3>Very High</h3>
+                        <p>+5,000 km² – densely populated with extensive infrastructure and houses (eg. Barcelona, Spain; Athens, Greece)</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Question 3: Public Transport -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">Rate the quality of public transport</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>Limited service (few bus, long waits), routes are inconvenient.</p>
+                    </div>
+                    <div class="option" data-value="High">
+                        <div class="circle"></div>
+                        <h3>High</h3>
+                        <p>Relatively reliable service, but not city-wide, with frequent delays</p>
+                    </div>
+                    <div class="option" data-value="Very High">
+                        <div class="circle"></div>
+                        <h3>Very High</h3>
+                        <p>Multimodal system (metro, train, bus, tram), highly connected with frequent service and affordable relative to income</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Question 4: Cycling Infrastructure -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">Rate the quality of cycling infrastructure</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Minimal">
+                        <div class="circle"></div>
+                        <h3>Minimal</h3>
+                        <p>There are few or no protected lanes, poor connectivity, and weak policy support. Infrastructure is fragmented or unsafe.</p>
+                    </div>
+                    <div class="option" data-value="Developing">
+                        <div class="circle"></div>
+                        <h3>Developing</h3>
+                        <p>Few protected lanes. There is growing political will, but the network is incomplete or inconsistent. Policies are in early stages.</p>
+                    </div>
+                    <div class="option" data-value="Extensive">
+                        <div class="circle"></div>
+                        <h3>Extensive</h3>
+                        <p>Good network, moderately safe and connected.Policies actively support cycling, but infrastructure may lack full separation or uniform quality across the city.</p>
+                    </div>
+                    <div class="option" data-value="Cycling-first">
+                        <div class="circle"></div>
+                        <h3>Cycling-First</h3>
+                        <p>Segregated lanes,wide coverage, pro-cycling policies  Cycling is integrated into urban mobility planning.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Question 5: Street Layout -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">Describe the predominant street layout</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Narrow Historic">
+                        <div class="circle"></div>
+                        <h3>Narrow Historic</h3>
+                        <p>Dense, walkable, often pedestrian-focused, usually found in older city cores.</p>
+                        <button class="example-button">See an example</button>
+                        <div class="image-popup">
+                            <img src="{{ url_for('static', filename='images/image2.png') }}" alt="Narrow Historic Street Layout Example">
+                        </div>
+                    </div>
+                  
+                    <div class="option" data-value="Mixed-width">
+                        <div class="circle"></div>
+                        <h3>Mixed Width</h3>
+                        <p>Combination of narrow streets and wider avenues with moderate walkability.</p>
+                        <button class="example-button">See an example</button>
+                        <div class="image-popup">
+                            <img src="{{ url_for('static', filename='images/image1.png') }}" alt="Mixed Width Street Layout Example">
+                        </div>
+                    </div>
+                    <div class="option" data-value="Highly Mixed Fabric">
+                        <div class="circle"></div>
+                        <h3>Highly Mixed Urban Fabric</h3>
+                        <p>Older, historic cores + modern expansion = varied walkability</p>
+                        <button class="example-button">See an example</button>
+                        <div class="image-popup">
+                            <img src="{{ url_for('static', filename='images/image3.png') }}" alt="Highly Mixed Urban Fabric Example">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- Question 6: Tourism Volume -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">Approximately how many tourists <br>visit your city annually? 
+                    </h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Low">
+                        <div class="circle"></div>
+                        <h3>Low</h3>
+                        <p>Under 100,000 – mostly locals. (Examples: Maribor, Slovenia; Pecs, Hungary)</p>
+                    </div>
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>100k–500k – some crowding in hotspots. (Examples: Ghent, Belgium; Zadar, Croatia)</p>
+                    </div>
+                    <div class="option" data-value="High">
+                        <div class="circle"></div>
+                        <h3>High</h3>
+                        <p>500k–1 million – tourists noticeable in key areas. (Examples: Porto, Portugal; Tallinn, Estonia)</p>
+                    </div>
+                    <div class="option" data-value="Very High">
+                        <div class="circle"></div>
+                        <h3>Very High</h3>
+                        <p>Over 1 million – tourism is a dominant presence. (Examples: Amsterdam, the Netherlands; Venice, Italy)</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Question 7: Car Ownership Level -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">What is the level of car ownership <br> in your city?</h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Low">
+                        <div class="circle"></div>
+                        <h3>Low</h3>
+                        <p>Under 300 cars/1000 people - Most people don't own a car, mainly in urban centers.Typical for dense cities, developing regions.</p>
+                    </div>
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>300-500 cars/1000 people - Mixed car and non-car households.</p>
+                    </div>
+                    <div class="option" data-value="High">
+                        <div class="circle"></div>
+                        <h3>High</h3>
+                        <p>Over 500 cars/1000 people - Most households have one or more cars.</p>
+                    </div>
+                </div>
+            </div>
+    <!--<!-- 
+    Car ownership scale based on trends discussed in: 
+    OECD/ITF (2017), "ITF Transport Outlook 2017", OECD Publishing, Paris. 
+    ISBN: 978-92-82-10717-9. Available at: https://www.itf-oecd.org/transport-outlook-2017 
+    This source discusses ownership patterns across regions and supports interpreting <300 as low and >500 as high. 
+    -->
+     -->
+            <!-- Question 8: Traffic Congestion -->
+            <div class="question-block">
+                <div class="question-header">
+                    <h2 class="question-title">What is the average daily time lost <br> to traffic congestion in your city?
+                    </h2>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="options-container">
+                    <div class="option" data-value="Low">
+                        <div class="circle"></div>
+                        <h3>Low</h3>
+                        <p>Less than 10 min - smooth commute.</p>
+                    </div>
+                    <div class="option" data-value="Medium">
+                        <div class="circle"></div>
+                        <h3>Medium</h3>
+                        <p>10-20 min - some delays at peak hours.</p>
+                    </div>
+                    <div class="option" data-value="High">
+                        <div class="circle"></div>
+                        <h3>High</h3>
+                        <p>21-40 min - regular stop-and-go.</p>
+                    </div>
+                    <div class="option" data-value="Severe">
+                        <div class="circle"></div>
+                        <h3>Severe</h3>
+                        <p>Over 40 min - daily planning needed to avoid jams.</p>
+                    </div>
+                </div>
+            </div>
+
+            </div> <!-- Close carousel div -->
+
+            <!-- Progress Indicator -->
+            <div class="progress-dots">
+                <span class="dot active" data-question="1"></span>
+                <span class="dot" data-question="2"></span>
+                <span class="dot" data-question="3"></span>
+                <span class="dot" data-question="4"></span>
+                <span class="dot" data-question="5"></span>
+                <span class="dot" data-question="6"></span>
+                <span class="dot" data-question="7"></span>
+                <span class="dot" data-question="8"></span>
+            </div>
+
+            <!-- End Quiz Button -->
+            <div class="end-quiz-section">
+                <button class="btn-end-quiz" disabled>Calculate My Match</button>
+            </div>
+
+            <!-- Results Container -->
+            <div class="results-container"></div>
+        </div> <!-- Close quiz-content div -->
+
+    </div>
+</div>
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='quiz-with-tooltips.js') }}"></script>
+<script> console.log('Script loaded successfully');
+</script>
 {% endblock %}
