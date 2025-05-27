@@ -785,7 +785,7 @@
   max-width: 1280px;
   margin: 0 auto;
   box-sizing: border-box;
-  margin: -60px auto 0 auto;  /* ← move up by 20px */
+  margin: -60px auto 20px auto;  /* ← move up by 20px */
 }
 
 .body7-title {
@@ -816,7 +816,7 @@
   min-height: 805px;
   position: relative;
   box-sizing: border-box;
-  padding: 81px 73px 0 73px;
+  padding: 100px 73px 0 73px;
 }
 
 .body8-title {
