@@ -750,7 +750,8 @@
   line-height: 30px;   /* unusual, but matches your spec */
   letter-spacing: -0.015em;
   color: #000000;
-  max-width: 900px;
+  margin: 0 0 20px 0;
+  max-width: 770px;
   margin-top: 50px;
 }
 
@@ -763,8 +764,7 @@
   color: #000000;
   max-width: 1291px;
   margin: 0;
-  margin-top: 10px;
-}
+  margin-top: 0px;
 
 .body7-content {
   background: #7CB690;
