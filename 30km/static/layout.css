@@ -741,7 +741,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 20px;
 }
 
 .body6-title {
@@ -751,7 +750,7 @@
   line-height: 30px;   /* unusual, but matches your spec */
   letter-spacing: -0.015em;
   color: #000000;
-  max-width: 770px;
+  max-width: 900px;
   margin-top: 50px;
 }
 
@@ -764,7 +763,7 @@
   color: #000000;
   max-width: 1291px;
   margin: 0;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 .body7-content {
