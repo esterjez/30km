@@ -423,7 +423,6 @@
     align-items: center;
     gap: 10px;
     box-sizing: border-box;
-    margin-top: -20px;
 }
 
 .progress-text {
@@ -511,7 +510,7 @@
     width: 100%;
     max-width: 1440px;
     height: 900px;
-    margin: 0 auto;
+    margin: -20px auto;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     display: none;
