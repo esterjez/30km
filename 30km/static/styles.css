@@ -78,6 +78,23 @@ body {
     text-decoration: underline;
 }
 
+/* yellow navbar */
+
+.navbar-yellow {
+    background-color: #F2D975; /* background */
+    width: 100%;
+    height: 70px;
+}
+
+.navbar-yellow .logo,
+.navbar-yellow .nav-links a {
+    color: white;
+}
+
+.navbar-yellow .nav-links a:hover {
+    text-decoration: underline;
+}
+
 
 .footer {
     width: 100%;
@@ -107,6 +124,33 @@ body {
     position: relative;
 }
 
+.footer-yellow {
+    width: 100%;
+    height: 70px;
+    background-color: #F2D975;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.footer-green {
+    width: 100%;
+    height: 70px;
+    background-color: #7CB690;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    z-index: 10;
+    position: relative;
+}
 
 /* HEADINGS */
 h1 {
