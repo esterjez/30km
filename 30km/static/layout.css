@@ -407,7 +407,7 @@
   }
   
   /* Yellow frame */
-  .frame {
+  .frame-result {
     width: 100%;
     max-width: 326px;
     height: auto;
