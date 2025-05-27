@@ -199,9 +199,9 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .see-more-btn {
@@ -215,7 +215,7 @@
     font-weight: 500;
     transition: all 0.2s ease;
     position: relative;
-    margin: -10px 0 0 90px;
+    margin: -20px 0 0 60px;
 }
 
 .see-more-btn:hover {
@@ -274,7 +274,7 @@
 .question-title {
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 61px;
     text-align: center;
