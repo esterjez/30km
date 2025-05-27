@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Bilbao</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/bilbao_1.jpg') }}" alt="Bilbao city photo">
+  </div>  
+  <h2 class="body3-city-name">Bilbao</h2>
+  <p class="body3-description">
+    A city in the Basque Country with a population of over 340.000, has undergone a large-scale transformation from an industrial city to a modern center of sustainable urbanism. <br><br>
+    Year of policy implementation: 2020.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Small<br>
+      Population density: High<br>
+      Transport accessibility: Medium<br>
+      Cycling infrastructure: Minimal<br>
+      Street layout: Narrow Historic<br>
+      Tourism levels: Medium<br>
+      Car ownership: Medium<br>
+      Traffic: Medium
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+        Bilbao was the first major city in Europe with a population of more than 300.000 people to fully implement a 30 km/h speed limit on all streets by 2020. The move was part of a wider sustainable urban mobility strategy. 
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve safety <br>
+            2. Improve air quality <br>
+            3. Reduce noise
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+        <strong>Comprehensive coverage:</strong> Unlike other major cities such as Madrid, where the 30 km/h speed limit only applies on certain streets, Bilbao has implemented this limit on all its streets. <br><br>
+        <strong>The speed limit measures</strong> were part of a wider Sustainable Urban Mobility Strategy (SUMP), which includes the development of public transport and cycling infrastructure. 
+        
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Infrastructure and planning:</strong> Since 2018, the city has been gradually reducing speed limits on 87% streets, starting with pilot projects and ending with full coverage in 2020. The city has modernized traffic lights, improved pedestrian crossings and expanded cycle paths. The focus was on integrating multiple modes of transport into a single network. </p>
+        
+            <p class="p4"><strong>Communication with residents:</strong> To raise awareness among residents and support them in adapting to the changes, the city administration carried out a large-scale information campaign "Bilbao 30" with materials sent to 150,000 households and information posted on public transport. </p>
+        
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        In 2020, Bilbao became the first major European city to apply 30 km/h on all streets. The city has installed 400 vertical road signs to inform drivers of new speed limits, alongside upgraded traffic lights designed to enhance safety for both pedestrians and cyclists. In addition, the network of cycle paths has been expanded, and a bike rental system has been introduced to promote active mobility. Public transport has also been significantly improved, with an extended network that now includes additional trams, metro lines, and hybrid buses, aiming to reduce the reliance on private cars.
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+<div class="h10-grid">
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+    <p class="p2">Fewer Accidents</p>
+    <p class="p3">
+      Between 22 September and 21 October 2020, road accidents in Bilbao dropped by 22.9% compared to the same period in 2019. This early result highlights how quickly lower speed limits can have a real-world impact on traffic safety, reducing both the frequency and severity of collisions across the city.
+    </p>
+  </div>
+
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
+    <p class="p2">Better Driver Behavior</p>
+    <p class="p3">
+      The number of fines for red light violations decreased by 46.6%, indicating that drivers are not only slowing down but also becoming more cautious and law-abiding. This behavioral change supports safer and more respectful interactions between drivers, pedestrians, and cyclists.
+    </p>
+  </div>
+
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+    <p class="p2">Monitoring and Planning</p>
+    <p class="p3">
+      The city actively monitors traffic safety, air quality, and noise levels to evaluate the effectiveness of the 30 km/h policy. This data-driven approach helps Bilbao make targeted improvements and ensures the policy continues to deliver long-term health and mobility benefits for residents.
+    </p>
+  </div>
+</div>
+
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

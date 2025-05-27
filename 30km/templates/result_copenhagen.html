@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Copenhagen</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/copenhagen.jpg') }}" alt="Copenhagen city photo">
+  </div>
+  <h2 class="body3-city-name">Copenhagen</h2>
+  <p class="body3-description">
+    The capital of Denmark with a population of about 650.000, one of the world leaders in bicycle infrastructure and urban sustainable planning. <br><br>
+    Year of policy implementation: 2023-2024.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Medium<br>
+      Population density: Medium<br>
+      Transport accessibility: Very High<br>
+      Cycling infrastructure: Cycling-first<br>
+      Street layout: Mixed-width<br>
+      Tourism levels: High<br>
+      Car ownership: Low<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          Copenhagen reduced urban speed limits to 30 km/h to improve safety, air quality, and overall quality of life in densely populated neighborhoods.
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve safety for pedestrians and cyclists <br>
+            2. Decrease pollution and noise <br>
+            3. Shift toward active transport
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Piloting builds trust </strong>. Using localized pilot zones allowed policymakers to test assumptions, measure impact, and build support incrementally. This is highly relevant for cities considering step-by-step adoption rather than a blanket policy.<br><br>
+          <strong>Cross-sector support is essential.</strong> Unlike in some cities where traffic police or technical departments resist such changes, Copenhagen's example shows that alignment between transport agencies, police, environmental scientists, and IT experts leads to smoother implementation. This insight is valuable for urban planners needing to assemble coalitions.<br><br>
+          <strong>Monitoring and modeling strengthen legitimacy.</strong> Copenhagen didn't rely on ideology alone. It backed its decisions with air quality data, noise analysis, and traffic safety metrics.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <br>
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Public engagement</strong> included community meetings and discussions with cycling organizations, schools, and elderly centers. A special emphasis was placed on collecting feedback from local communities. Also, points from professional drivers were taken into account. </p>
+            
+            <p class="p4"><strong>Traffic modeling and emissions research</strong> were conducted in parallel. Studies, such as one on Bispeengbuen, demonstrated how vehicle emissions deeply impact indoor air quality and exceed WHO limits near high-traffic corridors.</p>
+             
+            <p class="p4"><strong>Pilot projects </strong> in neighborhoods Valby и Vanløse showed that lowering speed limits reduced both the number and severity of accidents. These pilots particularly focused on vulnerable users like cyclists and children.</p>
+            
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>Short-term (1-3 years), 2022-2024:</strong> Introduce new speed limits in central and inner city areas. 2024: Extend 30 km/h speed limit zones to additional areas, including residential areas and areas with high pedestrian density. 
+        <span class="source">(Source: NL Times)</span><br><br>
+        <strong>Long-term (4-10 years), 2025 and beyond:</strong> Plan to implement intelligent transport systems (ITS)* to optimize traffic and improve safety.
+        <span class="source">(Source: NL Times)</span>
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Slower Speeds, Safer Streets</p>
+      <p class="p3">
+        Pilot areas saw a significant drop in serious accidents, especially those involving cyclists and pedestrians (qualitative data reported by city officials; citywide quantitative statistics forthcoming). <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
+      <p class="p2">Better air quality</p>
+      <br>
+      <br>
+      <br>
+      <p class="p3">
+        On streets like Bispeengbuen, peak-hour PM₂.₅ was over 10x WHO limits and NO₂ exceeded safe levels 6x—demonstrating the importance of reducing emissions via lower speeds. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Quieter, Calmer Neighborhoods</p>
+      <p class="p3">
+        Lower speed limits contribute to a 3 dB(A) reduction in traffic noise, which the Danish EPA links to improved quality of life and reduced health risks.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

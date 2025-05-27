@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Madrid</div>
+</section>
+<!-- NOT DONE YET CONTENT BESIDES WHY HIT THE BREAKES DESC-->
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/madrid.jpg') }}" alt="Madrid city photo">
+  </div>
+  <h2 class="body3-city-name">Madrid</h2>
+  <p class="body3-description">
+    The Spanish capital, with a population of about 3.2 million and a dense urban structure, actively regulates traffic in the center and develops "low emission zones." <br><br>
+    Year of policy implementation: 2018.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Metropolitan<br>
+      Population density: Very High<br>
+      Transport accessibility: Very High<br>
+      Cycling infrastructure: Minimal<br>
+      Street layout: Highly Mixed Fabric<br>
+      Tourism levels: Very High<br>
+      Car ownership: Medium<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          <strong>The city's key concerns </strong> are road safety, air pollution, and the quality of the urban environment. According to research, reducing the speed limit from 50 km/h to 30 km/h significantly lowers the risk of fatalities in collisions with pedestrians <br>
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve road safety <br>
+            2. Decrease pollution <br>
+            3. Improve livability
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Piloting First Built Confidence and Legitimacy.</strong> Madrid's 2016 pilot in the Chamberí district allowed the city to demonstrate real benefits—like improved safety and reduced pollution—before expanding citywide. This step-by-step approach gave policymakers evidence to justify broader changes and helped build public trust.<br><br>
+          <strong>National Policy Backing Enabled Long-Term Change.</strong> Madrid's early local actions laid the groundwork for Spain's national law in 2021 mandating 30 km/h on urban single-lane roads. This alignment between city and state created lasting impact, ensured consistency across regions, and gave cities stronger tools for enforcement.<br><br>
+          <strong>Framing Speed Reduction as Public Health, Not Just Transport.</strong> By emphasizing the protection of vulnerable groups—like older pedestrians and children—and linking speed reduction to cleaner air and quieter streets, Madrid positioned the policy as a quality-of-life issue. This broadened its appeal and helped overcome resistance to change
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <br>
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Public awareness campaign:</strong>Preparation included community communication and aligning the plan with national safety goals. The pilot laid the groundwork for broader reforms.</p>
+        
+            <p class="p4"><strong>Data-driven descision-making and infrastructure changes:</strong> Research showed that reducing the speed from 50 km/h to 30 km/h could drastically lower the fatality risk in collisions involving pedestrians. To support the shift, Madrid reimagined its streets with a more diverse cycling network and introduced cycling friendly infrastructure changes to further support the policy implementation</p>
+        
+            <p class="p4"><strong>Pilot phase:</strong> Madrid launched a pilot project in the Chamberí district to test a 30 km/h speed limit on local streets. The focus was on reducing traffic injuries and lowering emissions.</p>
+        
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>Madrid began implementing 30 km/h limits in September 2018</strong>, applying them to all streets with one lane in each direction—covering approximately 80% of the city's street network. 
+        <br><br>
+        The effort gained <strong>national momentum </strong>in May 2021, when Spain introduced a countrywide law mandating 30 km/h limits on comparable urban roads, effectively scaling Madrid's local initiative across the nation.
+        <br><br>
+        The city introduced shared car-bike lanes with a 30 km/h speed cap, combined pedestrian-bike paths in mixed-use areas, and segregated cycle tracks for busier routes. This mix of infrastructure types allowed for tailored solutions based on neighborhood needs and traffic conditions.
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Slower Speeds, Safer Streets</p>
+      <p class="p3">
+        The introduction of the 30 km/h speed limit in Madrid aimed to improve road safety, particularly for vulnerable road users such as pedestrians and cyclists.<br>
+        
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
+      <p class="p2">Promotion of Active Mobility</p>
+      <p class="p3">
+        The 30 km/h speed limit has encouraged the use of active transportation modes. Madrid has expanded its cycling infrastructure, including shared car-bike lanes, combined pedestrian-bike paths, and segregated cycle tracks, making the city more accommodating for cyclists and pedestrians.<br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Environmental improvements</p>
+      <p class="p3">
+        Lower speed limits contribute to environmental benefits. On average, cities have observed an 18% decrease in emissions, a 2.5 dB reduction in noise pollution, and a 7% drop in fuel consumption following the implementation of 30 km/h zones.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

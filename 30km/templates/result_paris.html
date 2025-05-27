@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Paris</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/paris_1.jpg') }}" alt="Paris city photo">
+  </div>  
+  <h2 class="body3-city-name">Paris</h2>
+  <p class="body3-description">
+    A capital metropolis in France with a population of over 2 million in the city and over 10 million in the agglomeration, historically dense center, strong role of public transport, high population density.<br><br>
+    Year of policy implementation: 2021.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Metropolitan<br>
+      Population density: Very High<br>
+      Transport accessibility: Very High<br>
+      Cycling infrastructure: Extensive<br>
+      Street layout: Highly Mixed Fabric<br>
+      Tourism levels: Very High<br>
+      Car ownership: Low<br>
+      Traffic: Severe
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          Since August 30, 2021, Paris has introduced a speed limit of 30 km/h on most streets, with the exception of the ring road and some major highways. 
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve safety <br>
+            2. Reduce noise <br>
+            3. Improve the urban environment
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Positive perception</strong>. Most Parisians support the speed limit, noting improvements in safety and quality of life. <br><br> 
+          <strong>Need for adaptation</strong>. Some groups, such as taxi drivers and couriers, have expressed concerns about the impact on their work. <br><br>
+          <strong>Reduction in accidents</strong>. In 2022, the number of serious and fatal accidents in Paris decreased by 25% compared to 2019, confirming the effectiveness of the 30 km/h speed limit. 
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+           
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Public consultation:</strong> At the end of 2020, a survey was conducted among residents of Paris and the Ile-de-France region; 59% of Parisians supported reducing the speed to 30 km/h. </p>
+        
+        
+            <p class="p4"><strong>Pilot zones:</strong> before the general implementation, more than 60% of streets already had a 30 km/h limit. Infrastructure changes: widening sidewalks, landscaping and creating bike paths.</p>
+        
+            
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>Extension of the 30 km/h zone</strong>: As of August 30, 2021, almost all streets in Paris are now 30 km/h zones, except for main roads like the périphérique and Champs-Elysées. This shift was accompanied by a large public information campaign and infrastructure changes.
+        <span class="source">(Source: Paris City Hall)</span><br><br>
+        <strong>Information campaign</strong>: the city authorities actively informed residents about the new rules and their benefits.
+        <span class="source">(Source: opendata.paris.fr)</span>
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Accidents Down</p>
+      <p class="p3">
+        Road accidents dropped by 25%, with a 40% decrease in serious and fatal injuries. <br>
+        <span class="source">(Source: Paris City Hall)</span>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Less Noise</p>
+      <p class="p3">
+        Residential noise levels fell by 2–3 dB, significantly improving comfort. <br>
+        <span class="source">(Source: opendata.paris.fr)</span>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
+      <p class="p2">More Cycling</p>
+      <p class="p3">
+        Cycling increased by 60% between 2019 and 2022, in parallel with 30 km/h zones and expansion of bike infrastructure. <br>
+        <span class="source">(Source: European Data Journalism)</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

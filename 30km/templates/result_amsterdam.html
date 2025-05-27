@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Amsterdam</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/amsterdam_1.jpeg') }}" alt="Amsterdam city photo">
+  </div>  
+  <h2 class="body3-city-name">Amsterdam</h2>
+  <p class="body3-description">
+    The capital of the Netherlands with a population of about 900.000, known for its dense historical development, canals and priority for cycling.<br><br>
+    Year of policy implementation: 2023.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Medium<br>
+      Population density: Very High<br>
+      Transport accessibility: Very High<br>
+      Cycling infrastructure: Cycling-first<br>
+      Street layout: Narrow Historic<br>
+      Tourism levels: Very High<br>
+      Car ownership: Low<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          The main goal was to improve traffic safety:<br>
+          the city experienced around 4,800 accidents annually, four times the official police statistics
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve safety <br>
+            2. Decrease pollution <br>
+            3. Minimize noise
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Empower residents </strong> through hands-on educational programs in schools, eye-catching public campaigns, and opportunities to take part in meaningful actions—like removing visual clutter from road signs.<br><br>
+          <strong>Transform awareness into action </strong> with smart solutions: redesign road markings and install dynamic digital signage to highlight new speed limits and encourage compliance.<br><br>
+          <strong>Pilot project and public awareness campaign</strong> to raise community support.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/reward.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Public awareness campaign:</strong> Launched the "30 for Everyone" initiative, featuring educational materials for schools, social media content, radio spots, and outdoor advertising.</p>
+            <p class="p4"><strong>Infrastructure upgrades:</strong> Installed approximately 4,500 new road signs and modified 170 traffic lights to support enforcement of the new speed limit.</p>
+            <p class="p4"><strong>Pilot project:</strong> Testing digital signs that react to vehicle noise levels in real time to raise driver awareness of noise pollution.</p>
+        
+            <p class="p4"><strong>Reward system in planning:</strong> Exploring a program that rewards drivers who follow speed limits by channeling funds into local community projects, such as playgrounds.</p>
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        Widespread Implementation: As of 8 December 2023, the 30 km/h speed limit applies to 80% of Amsterdam's city roads.
+        <br><br>
+        Enforcement in Action: Since June 2024, both fixed and mobile speed cameras have been deployed to monitor compliance.
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Slower Speeds, Safer Streets</p>
+      <p class="p3">
+        Average driving speed on affected roads dropped by 5%, now around 20 km/h. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
+      <p class="p2">Minimal Delay, Big Impact</p>
+      <p class="p3">
+        Travel times increased by just 5%—roughly 30 seconds on a 10-minute trip. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
+      <p class="p2">Strong Community Support</p>
+      <p class="p3">
+        About 80% of residents back the new speed limit, with pedestrians and cyclists especially in favor. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Quieter, Calmer Neighborhoods</p>
+      <p class="p3">
+        Noticeable noise reduction and better conditions for walking and cycling—especially near schools and residential zones.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="references-section">
+  <h2 class="references-title">References and Sources</h2>
+  <div class="references-grid">
+    <div class="reference-column">
+      <p>Amsterdam.nl – Road Safety and Traffic Data (2024)</p>
+      <p>NL Times – "Amsterdam to Introduce 30 km/h Speed Limits Citywide" (2023)</p>
+      <p>Child in the City – Public Perception on Speed Reduction (2023)</p>
+    </div>
+    <div class="reference-column">
+      <p>DutchNews.nl – Implementation Timeline and Technical Rollout</p>
+      <p>City of Amsterdam Transport Department – Speed Monitoring Reports</p>
+      <p>30 for Everyone Campaign Materials – Awareness and Outreach Programs</p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
+{% endblock %}

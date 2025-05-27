@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Munich</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/munich.jpg') }}" alt="Munich city photo">
+  </div>
+  <h2 class="body3-city-name">Munich</h2>
+  <p class="body3-description">
+    One of the largest cities in Germany with a population of about 1.5 million people, combines a historic center and modern business districts, actively developing bicycle and pedestrian infrastructure. <br><br>
+    Year of policy implementation: 2024
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Large<br>
+      Population density: High<br>
+      Transport accessibility: High<br>
+      Cycling infrastructure: Extensive<br>
+      Street layout: Mixed-width<br>
+      Tourism levels: High<br>
+      Car ownership: High<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+    <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          The main goal was to improve air quality and reduce noise levels, especially in areas where air pollution levels are above acceptable limits.
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Decrease pollution <br>
+            2. Minimize noise
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Integrated Approach to Urban Mobility.</strong> Munich's experience underscores the effectiveness of combining speed limit reductions with broader sustainable mobility strategies, including infrastructure improvements and public engagement, to achieve tangible benefits in air quality, safety, and livability. <br><br>
+          <strong>Tactical Urbanism as a Testing Ground.</strong> By employing temporary and flexible urban design strategies, Munich was able to pilot and refine interventions that promote active mobility and improve public spaces, demonstrating the value of tactical urbanism in urban planning.<br><br>
+          <strong>Legal Action as a Catalyst for Change.</strong>Legal pressures and court rulings played a significant role in prompting Munich to implement the 30 km/h speed limit, highlighting the importance of regulatory frameworks in driving environmental and public health initiatives.
+
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <br>
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <br>
+            <img src="/static/icons/reward.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Smarter Regulations for Healthier Air:</strong> Munich introduced Low Emission Zones (LEZs) and banned heavy trucks from transiting through the city. The result? A 13.8% drop in PM₁₀ pollution on high-traffic streets and a 4.8% reduction in residential areas — making the air cleaner for everyone</p>
+        
+            <p class="p4"><strong>Tactical Urbanism in Action:</strong> To test and adapt urban space more dynamically, Munich implemented a series of tactical urbanism initiatives. These included temporary bike lanes, sidewalk widenings, and low-cost interventions aimed at calming traffic and improving pedestrian comfort. These short-term experiments allowed the city to observe real-world behavior changes, gather data, and engage directly with residents. </p>
+
+            <p class="p4"><strong>Infrastructure upgrades:</strong>Munich has expanded its cycling infrastructure, including: shared car-bike lanes with a 30 km/h speed cap, combined pedestrian-bike paths in mixed-use areas, and segregated cycle tracks for busier routes</p>
+
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>June 2024:</strong> A 30 km/h speed limit was introduced on a 2.5 km section of Landshuter Allee, part of the Mittlerer Ring, replacing the previous 60 km/h limit.<br><br>
+        <strong>March 2025:</strong>For the first time in 14 years, the annual average NO₂ concentration on Landshuter Allee met the EU limit of 40 µg/m³.
+        
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Air quality improvements</p>
+      <br><br>
+      <p class="p3">
+        The implementation of the 30 km/h speed limit on Landshuter Allee has led to measurable improvements in air quality, with NO₂ levels dropping below the EU threshold for the first time in over a decade.<br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
+      <p class="p2">Promotion of active mobility</p>
+      <p class="p3">
+        The city's tactical urbanism initiatives have encouraged more residents to choose cycling and walking over car travel, contributing to a more sustainable and health-conscious urban environment<br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Quieter, Calmer Neighborhoods</p>
+      <p class="p3">
+        Lower speed limits have also contributed to a decrease in traffic noise, enhancing the quality of life for residents in affected areas.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

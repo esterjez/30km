@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Oslo</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/oslo.jpg') }}" alt="Madrid city photo">
+  </div>
+  <h2 class="body3-city-name">Oslo</h2>
+  <p class="body3-description">
+    The capital of Norway with a population of about 700.000, actively developing environmentally friendly transport, compact center, and mixed development.<br><br>
+    Year of policy implementation: 2015.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Medium<br>
+      Population density: Medium<br>
+      Transport accessibility: High<br>
+      Cycling infrastructure: Developing<br>
+      Street layout: Mixed-width<br>
+      Tourism levels: Medium<br>
+      Car ownership: Medium<br>
+      Traffic: Medium
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+    <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          Oslo’s adoption of reduced speed limits is <strong>rooted in its commitment to the Vision Zero initiative</strong>, aiming to eliminate all traffic fatalities and severe injuries. Recognizing the disproportionate risk faced by pedestrians and cyclists, the city prioritized lowering speed limits to enhance safety for these vulnerable groups.
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Reduce traffic-related fatalities and injuries <br>
+            2. Enhance urban livability 
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Holistic strategy.</strong> Combining infrastructure changes, policy enforcement, and public engagement creates a comprehensive safety net.
+          The city installed approximately 500 speed humps and introduced curb extensions to naturally slow down traffic.<br><br>
+          <strong> Community involvement.</strong> Engaging residents in planning and monitoring fosters a sense of ownership and compliance.<br><br>
+          <strong>Data-driven decisions.</strong> Continuous monitoring and analysis ensure that policies are effective and adjusted as needed.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/reward.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Educational campaigns:</strong>The city launched initiatives to educate drivers, cyclists, and pedestrians about road safety and the benefits of reduced speed limits.</p>
+        
+            <p class="p4"><strong>Community speed watch programs</strong> Residents participated in monitoring traffic speeds, fostering a collective responsibility for road safety.</p>
+        
+            <p class="p4"><strong>School programs:</strong> Children were educated on traffic safety, and schools were involved in planning and implementing safety measures.</p>
+        
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>Differentiated speed zones:</strong> Residential areas were designated with 30 km/h limits, streets with bus traffic at 40 km/h, and main arterial roads at 50 km/h. 
+        <br><br>
+        <strong>Reallocation of road space:</strong> Oslo removed over 1,000 street-side parking spots, replacing them with bike lanes and pedestrian areas to prioritize non-motorized transport.
+        <br><br>
+        <strong>School zone safety initiatives:</strong> "Heart zones" were established around schools, restricting car access during peak hours to protect children. The city aimed to create 100 such zones over four years.
+
+      
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Zero pedestrian and cyclist fatalities</p>
+      <p class="p3">
+        In 2019, Oslo recorded no deaths among pedestrians and cyclists, a historic achievement for the city.<br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
+      <p class="p2">Increased active transportation</p>
+      <p class="p3">
+        The safer environment led to a rise in walking and cycling, contributing to public health and environmental benefits. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
+      <p class="p2">Reduction in severe injuries</p>
+      <p class="p3">
+        Between 2015 and 2020, the number of severe injuries decreased by nearly 40%, demonstrating the effectiveness of the implemented measures.<br>
+      </p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

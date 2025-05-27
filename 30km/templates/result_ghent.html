@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Ghent</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/ghent.jpg') }}" alt="Ghent city photo">
+  </div>
+  <h2 class="body3-city-name">Ghent</h2>
+  <p class="body3-description">
+    A city in East Flanders, Belgium, with a population of over 250.000 people, a compact center, known for transforming street traffic and supporting sustainable mobility. <br><br>
+    Year of policy implementation: 2015.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Small<br>
+      Population density: Medium<br>
+      Transport accessibility: Medium<br>
+      Cycling infrastructure: Cycling-first<br>
+      Street layout: Narrow Historic<br>
+      Tourism levels: Medium<br>
+      Car ownership: Medium<br>
+      Traffic: Medium
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+          Ghent has introduced 30 km/h speed limits across the city to improve safety in the city, <strong>promote sustainable mobility and improve environmental quality.</strong>
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Improve road safety <br>
+            2. Promote sustainable transport
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          <strong>Aligning speed limit policies with broader mobility and climate strategies </strong> ensures cohesive urban development.<br><br>
+          <strong>Investing in infrastructure</strong>. Additional infrastructure such as cycling facilities is critical to supporting behavioural shifts towards sustainable transport.<br><br>
+          <strong>Data-driven approach.</strong> Monitoring and evaluating results has enabled informed adjustments and demonstrated the effectiveness of policies.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/public.svg" alt="Public Awareness" class="body5-icon">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/reward.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Holistic planning:</strong> The 30 km/h zones were part of the wider Ghent Sustainable Urban Mobility Plan (SUMP), which aims to switch 50% of transport modes to sustainable ones by 2030.</p>
+        
+            <p class="p4"><strong>Infrastructure upgrades:</strong> Clear signs and road markings were installed to indicate the new speed zones.</p>
+        
+            <p class="p4"><strong>Public awareness campaigns:</strong> Initiatives such as "Gent daagt uit" ("Ghent Challenges") were launched to inform residents about the new speed limits and their benefits. </p>
+        
+            <p class="p4"><strong>Enforcement measures:</strong> Initial stages focused on raising awareness, followed by stricter enforcement with fines for non-compliance.</p>
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+ 
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+        <strong>Stage-by-stage implementation.</strong> Since 2015, 30 km/h zones have been gradually introduced in various neighbourhoods, including the Mariakerke and Vondelgem. <br><br>
+        <strong>Comprehensive coverage.</strong> By 2018, most of Ghent's city centre and surrounding areas were covered by 30 km/h zones. <br><br>
+        <strong>Additional measures. </strong> Developing extensive cycling infrastructure, including over 500 kilometres of cycle paths and over 60 cycle bridges and underpasses, to support the transition to sustainable transport. 
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+  <div class="h10-grid">
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+      <p class="p2">Reduced road accidents</p>
+      <p class="p3">
+        One year after implementation, the number of road accidents had decreased by 10%, and the number of serious injuries had decreased by 26% <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Transportation icon">
+      <p class="p2">Lower speed, Big Impact</p>
+      <p class="p3">
+        On 29 monitored streets, the 85th percentile speed dropped from 40 km/h to 36 km/h. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Community icon">
+      <p class="p2">Mobility pattern change</p>
+      <p class="p3">
+        Cycling increased from 22% to 37%, and public transport use increased by 6%. <br>
+      </p>
+    </div>
+    <div class="h10-item">
+      <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
+      <p class="p2">Air quality improvement</p>
+      <p class="p3">
+        The Low Emission Zone introduced in 2020 resulted in a 52% reduction in soot particles in the city centre.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}

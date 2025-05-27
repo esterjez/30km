@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}City Tool Result - 30km City{% endblock %}
+
+{% block navbar_class %}navbar-result{% endblock %}
+
+{% block content %}
+
+<!-- Hero2 section — DO NOT TOUCH -->
+<section class="hero2-section">
+  <h1 class="hero2-title">Your inspiration match:</h1>
+  <div class="hero-result">Helsinki</div>
+</section>
+
+<!-- Body3 section -->
+<section class="body3-section">
+
+  <!-- Left side: Image and Description -->
+  <div class="photo-space">
+    <img src="{{ url_for('static', filename='images/helsinki_1.png') }}" alt="Helsinki city photo">
+  </div>  
+  <h2 class="body3-city-name">Helsinki</h2>
+  <p class="body3-description">
+    The capital of Finland with a population of over 650.000, a city with clear zoning, a large number of green spaces and sustainable planning. <br><br>
+    Year of policy implementation: 2019.
+  </p>
+
+  <!-- Right side: Characteristics + Parameters -->
+  <h3 class="body3-title">City characteristics:</h3>
+
+  <div class="body3-parameters">
+    <!-- Text -->
+    <div class="parameters-text">
+      City size: Medium<br>
+      Population density: Medium<br>
+      Transport accessibility: High<br>
+      Cycling infrastructure: Extensive<br>
+      Street layout: Mixed-width<br>
+      Tourism levels: Medium<br>
+      Car ownership: Medium<br>
+      Traffic: High
+    </div>
+
+    <!-- Icons -->
+    <img src="/static/icons/size.svg" class="icon-size" alt="Icon size">
+    <img src="/static/icons/people.svg" class="icon-people" alt="Icon people">
+    <img src="/static/icons/transport.svg" class="icon-transport" alt="Icon transport">
+    <img src="/static/icons/cycling.svg" class="icon-cycling" alt="Icon cycling">
+    <img src="/static/icons/street_layout.svg" class="icon-street" alt="Icon street">
+    <img src="/static/icons/tourism.svg" class="icon-tourism" alt="Icon tourism">
+    <img src="/static/icons/car_ownership.svg" class="icon-car" alt="Icon car ownership">
+    <img src="/static/icons/traffic_white.svg" class="icon-traffic" alt="Icon traffic">
+  </div>
+
+  <p class="match-accuracy">Match accuracy:</p>
+  <div class="match-accuracy-number">{{ accuracy }}%</div>
+  <p class="match-explanation">
+    The match percentage reflects how closely a city aligns with predefined categories. It should be seen as an indicative accuracy score rather than a representation of real-world data.
+  </p>
+
+  <div class="body3-section">
+    <div class="body3-content">
+      <!-- all your .photo-space, .body3-city-name etc. -->
+    </div>
+  </div>
+  
+  <div class="white-block">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <!-- Left side content -->
+        <h2 class="section-title">Why this city hit the brakes?</h2>
+        <p class="section-text">
+         Helsinki's 30 km/h speed limit policy aims to improve road safety and support sustainable transport. It forms part of the city's goal to halve traffic deaths and injuries by 2030 and eliminate them entirely by 2050. By making streets safer, Helsinki also encourages walking, cycling, and public transport over private car use.
+
+        </p>
+        <div class="frame">
+          <p class="body4-list">
+            The aim was to: <br>
+            1. Reduce traffic accidents and fatalities. <br>
+            2. Promote sustainable transport
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <!-- Right side content -->
+        <h2 class="takeaways-title">Key takeaways and lessons learned</h2>
+        <p class="takeaways-text">
+          Public consultation and tailored approaches by area type helped secure support. Infrastructure such as speed bumps and visual cues were used, particularly near schools and residential areas.
+        </p>
+      </div>
+      
+      <div class="line-9"></div>
+
+<div class="body5-section">
+    <h2 class="body5-title">Countdown to 30: What It Took to Prepare</h2>
+        
+        <div class="body5-content">
+        <div class="body5-icons">
+            <img src="/static/icons/30_green.svg" alt="Infrastructure Upgrades" class="body5-icon">
+            <img src="/static/icons/pilot_project.svg" alt="Pilot Project" class="body5-icon">
+            <img src="/static/icons/infrastructure.svg" alt="Public Awareness" class="body5-icon">
+            
+            <img src="/static/icons/public.svg" alt="Reward System" class="body5-icon">
+        </div>
+        <div class="body5-text">
+            <p class="p4"><strong>Phased implementation of speed limits:</strong> Starting in 2004, Helsinki introduced 30 km/h zones in residential areas and the city centre, expanding them in 2019 to encompass most streets. </p>
+        
+            <p class="p4"><strong>Public consultations:</strong> Engagements were held with various stakeholders, including residents, businesses, and advocacy groups, to gather input and build consensus on the changes. </p>
+        
+            <p class="p4"><strong>Infrastructure modifications:</strong> The city employed traffic calming measures such as speed bumps to naturally slow down traffic.</p>
+        
+            <p class="p4"><strong>Strengthening traffic enforcement:</strong> Helsinki plans to install 70 automatic speed control systems to enforce the new speed limits. By the end of 2023, 33 of them have been installed.</p>
+        </div>
+        </div>
+    </div>
+
+</div>
+  </div>
+  
+
+</section>
+<section class="h10-section">
+  <div class="h10-top">
+    <div class="h10-text">
+      <h2 class="h10-title">From Numbers to Neighbourhoods: Implementation</h2>
+      <p class="h10-description">
+       <strong>Tailored approach by street type:</strong> Helsinki customized its speed reductions depending on the character of each area. In central neighborhoods like Kallio and Punavuori where walking and cycling dominate and street activity is high, limits were lowered to 30 km/h on most local roads. In more car-oriented or connector roads outside the center, such as sections of Mannerheimintie, limits remained at 40–50 km/h depending on traffic composition and infrastructure. <br><br>
+       <strong>Focus on school zones:</strong> Speed limits were dropped to 30 km/h near more than 120 schools and kindergartens. Visual clues like color-coded were deployed to improve driver awareness in these areas. <br><br>
+       <strong>Redesign of street geometry in more than 50 areas:</strong> These included raised crosswalks, narrower lanes in residential zones like Käpylä, and curb extensions to slow turning vehicles. <br><br>
+       <strong>Integrated cycling and pedestrian upgrades</strong> help to encourage bike commuting while improving safety.
+
+
+      </p>
+    </div>
+    <div class="h10-icon">
+      <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Motorbike Icon">
+    </div>
+  </div>
+
+  <hr class="h10-divider">
+  <br>
+  <br>
+  <br> 
+
+  <h3 class="h10-subtitle">Slower, Safer, Better?</h3>
+  <br>
+  <br>
+  <br> 
+  
+ <div class="h10-grid">
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
+    <p class="p2">Safer Roads</p>
+    <p class="p3">
+      Between 2016 and 2022, the number of pedestrian and cyclist deaths fell by approximately 75%, contributing to one of the lowest road fatality rates among European capitals. This significant drop shows the long-term effect of sustained speed reduction and prioritizing vulnerable road users.
+    </p>
+  </div>
+
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
+    <p class="p2">Calmer Roads</p>
+    <p class="p3">
+      Injuries to vulnerable road users fell by almost 30% in areas where lower speed limits were introduced, compared with baseline data from the early 2010s. Slower speeds mean fewer severe collisions and a safer environment for everyone.
+    </p>
+  </div>
+
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/people.svg') }}" alt="Support icon">
+    <p class="p2">Perceived Safety</p>
+    <p class="p3">
+      Residents reported feeling significantly safer, particularly families and older citizens. Lower speeds near schools, parks, and shopping streets have made walking and cycling more appealing and accessible in daily life.
+    </p>
+  </div>
+
+  <div class="h10-item">
+    <img src="{{ url_for('static', filename='icons/transport.svg') }}" alt="Enforcement icon">
+    <p class="p2">Smart Enforcement</p>
+    <p class="p3">
+      Helsinki integrates speed enforcement with technology: 70 automatic speed control systems are planned, with 33 already in place by the end of 2023. These tools not only increase compliance but also provide valuable data to evaluate and adjust mobility policies over time.
+    </p>
+  </div>
+  
+</div>
+
+</section>
+<section class="city-links-section">
+  <h2 class="city-links-title">Explore All City Profiles</h2>
+  <div class="city-links">
+    <a href="{{ url_for('result_amsterdam') }}">Amsterdam</a>
+    <a href="{{ url_for('result_oslo') }}">Oslo</a>
+    <a href="{{ url_for('result_munich') }}">Munich</a>
+    <a href="{{ url_for('result_madrid') }}">Madrid</a>
+    <a href="{{ url_for('result_ghent') }}">Ghent</a>
+    <a href="{{ url_for('result_copenhagen') }}">Copenhagen</a>
+    <a href="{{ url_for('result_paris') }}">Paris</a>
+    <a href="{{ url_for('result_brussels') }}">Brussels</a>
+    <a href="{{ url_for('result_zurich') }}">Zurich</a>
+    <a href="{{ url_for('result_bilbao') }}">Bilbao</a>
+    <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
+  </div>
+</section>
+{% endblock %}
+
