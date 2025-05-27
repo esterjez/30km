@@ -735,7 +735,7 @@
   background: #7CB690;
   width: 100%;
   max-width: 1440px;
-  padding: 32px 74px;  /* matches your left/top spacing */
+  padding: 32px 90px;  /* matches your left/top spacing */
   box-sizing: border-box;
   min-height: 285px;  /* fixed height for consistency */
   display: flex;
@@ -753,6 +753,7 @@
   margin: 0 0 20px 0;
   max-width: 770px;
   margin-top: 50px;
+  text-align: left;
 }
 
 .body6-text {
@@ -765,7 +766,7 @@
   max-width: 1291px;
   margin: 0;
   margin-top: 0px;
-
+}
 .body7-content {
   background: #7CB690;
   width: 100%;
