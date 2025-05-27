@@ -735,7 +735,7 @@
   background: #7CB690;
   width: 100%;
   max-width: 1440px;
-  padding: 32px 74px;  /* matches your left/top spacing */
+  padding: 32px 30px;  /* matches your left/top spacing */
   box-sizing: border-box;
   min-height: 285px;  /* fixed height for consistency */
   display: flex;
