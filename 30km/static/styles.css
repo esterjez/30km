@@ -93,6 +93,20 @@ body {
     position: relative;
 }
 
+.footer-black {
+    width: 100%;
+    height: 70px;
+    background-color: #262323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    z-index: 10;
+    position: relative;
+}
+
 
 /* HEADINGS */
 h1 {
