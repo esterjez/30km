@@ -752,7 +752,6 @@
   color: #000000;
   max-width: 770px;
   margin-top: 50px;
-  margin-left: -100px;
 }
 
 .body6-text {
@@ -771,7 +770,7 @@
   background: #7CB690;
   width: 100%;
   max-width: 1440px;
-  padding: 48px 90px 64px 90px;
+  padding: 88px 90px 64px 90px;
   box-sizing: border-box;
 }
 
@@ -817,7 +816,7 @@
   min-height: 805px;
   position: relative;
   box-sizing: border-box;
-  padding: 51px 73px 0 73px;
+  padding: 81px 73px 0 73px;
 }
 
 .body8-title {
