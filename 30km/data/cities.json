@@ -1,0 +1,123 @@
+[
+    {
+      "city": "Amsterdam",
+      "size": "Medium",
+      "density": "Very High",
+      "public_transport": "Very High",
+      "cycling_infrastructure": "Cycling-first",
+      "street_layout": "Narrow Historic",
+      "tourism": "Very High",
+      "car_ownership": "Low",
+      "traffic_congestion": "High"
+    },
+    {
+      "city": "Munich",
+      "size": "Large",
+      "density": "High",
+      "public_transport": "High",
+      "cycling_infrastructure": "Extensive",
+      "street_layout": "Mixed-width",
+      "tourism": "High",
+      "car_ownership": "High",
+      "traffic_congestion": "High"
+    },
+    {
+      "city": "Ghent",
+      "size": "Small",
+      "density": "Medium",
+      "public_transport": "Medium",
+      "cycling_infrastructure": "Extensive",
+      "street_layout": "Narrow Historic",
+      "tourism": "Medium",
+      "car_ownership": "Medium",
+      "traffic_congestion": "Medium"
+    },
+    {
+      "city": "Copenhagen",
+      "size": "Medium",
+      "density": "Medium",
+      "public_transport": "Very High",
+      "cycling_infrastructure": "Cycling-first",
+      "street_layout": "Mixed-width",
+      "tourism": "High",
+      "car_ownership": "Low",
+      "traffic_congestion": "High"
+    },
+    {
+      "city": "Paris",
+      "size": "Metropolitan",
+      "density": "Very High",
+      "public_transport": "Very High",
+      "cycling_infrastructure": "Extensive",
+      "street_layout": "Highly Mixed Fabric",
+      "tourism": "Very High",
+      "car_ownership": "Low",
+      "traffic_congestion": "Severe"
+    },
+    {
+      "city": "Brussels",
+      "size": "Large",
+      "density": "Medium",
+      "public_transport": "High",
+      "cycling_infrastructure": "Developing",
+      "street_layout": "Highly Mixed Fabric",
+      "tourism": "High",
+      "car_ownership": "Medium",
+      "traffic_congestion": "Severe"
+    },
+    {
+      "city": "Zurich",
+      "size": "Medium",
+      "density": "High",
+      "public_transport": "Very High",
+      "cycling_infrastructure": "Extensive",
+      "street_layout": "Mixed-width",
+      "tourism": "Medium",
+      "car_ownership": "Low",
+      "traffic_congestion": "Medium"
+    },
+    {
+      "city": "Bilbao",
+      "size": "Small",
+      "density": "High",
+      "public_transport": "Medium",
+      "cycling_infrastructure": "Developing",
+      "street_layout": "Narrow Historic",
+      "tourism": "Medium",
+      "car_ownership": "Medium",
+      "traffic_congestion": "Medium"
+    },
+    {
+      "city": "Helsinki",
+      "size": "Medium",
+      "density": "Medium",
+      "public_transport": "High",
+      "cycling_infrastructure": "Developing",
+      "street_layout": "Mixed-width",
+      "tourism": "Medium",
+      "car_ownership": "Medium",
+      "traffic_congestion": "High"
+    },
+    {
+      "city": "Oslo",
+      "size": "Medium",
+      "density": "Medium",
+      "public_transport": "High",
+      "cycling_infrastructure": "Developing",
+      "street_layout": "Mixed-width",
+      "tourism": "Medium",
+      "car_ownership": "Medium",
+      "traffic_congestion": "Medium"
+    },
+    {
+      "city": "Madrid",
+      "size": "Metropolitan",
+      "density": "Very High",
+      "public_transport": "Very High",
+      "cycling_infrastructure": "Developing",
+      "street_layout": "Highly Mixed Fabric",
+      "tourism": "Very High",
+      "car_ownership": "Medium",
+      "traffic_congestion": "High"
+    }
+  ]
