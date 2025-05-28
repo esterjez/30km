@@ -409,7 +409,7 @@
   /* Yellow frame */
   .frame-result {
     width: 100%;
-    max-width: 326px;
+    max-width: 600px;
     height: auto;
     background: #F2D975;
     border-radius: 50px;
@@ -505,13 +505,10 @@
 .h10-section {
   background-color: #262323;
   color: #ffffff;
-  padding: 60px 20px;
-  width: 1440px;
-  min-height: 1131px;
+  width: 100%;
+  min-height: 1100px;
   position: relative;
-  padding-bottom: 80px
 }
-
 
 /* Top Text + Icon Layout */
 .h10-top {
@@ -527,6 +524,7 @@
   flex: 1;
   min-width: 300px;
   margin-right: 40px;
+  margin-top: 30px;
 }
 
 .h10-title {
@@ -546,7 +544,7 @@
   flex-shrink: 0;
   width: 160px;
   height: 160px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .h10-icon img {
@@ -595,6 +593,7 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s;
+  margin-bottom: 50px;
 }
 
 .h10-item:hover {
@@ -607,13 +606,15 @@
   margin-bottom: 20px;
 }
 
-.p2 {
+.p12 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
 }
 
-.p3 {
+.p13 {
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Inter', sans-serif;
@@ -631,42 +632,38 @@
 /* ========================== */
 .references-section {
   background-color: #262323;
-  padding: 60px 40px;
-  max-width: 1440px;
-  margin: 0 auto;
+  color: #ffffff;
+  width: 100%;
+  min-height: 200px;
+  position: relative;
 }
 
 .references-title {
+  text-align: left;
+  font-size: 23px;
+  font-weight: 600;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 200;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #FFFFFF;
+  margin: 0 100px 0 100px;
+  padding: 20px;
 }
 
-.references-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.reference-column {
-  flex: 1 1 400px;
+.sources-frame {
+  width: 100%;
+  max-width: 1200px;
   font-family: 'Inter', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-.reference-column p {
-  font-size: 14px;      
-  line-height: 1.6;
-  margin-bottom: 20px;  
-  color: #FFFF;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  color:white;
+  margin: 0px 100px 0 100px;
+  padding: 20px;
 }
 
+.sources-frame a {
+  color: #F2D975;
+  text-decoration: underline;
+  font-weight: 600;
+}
 
 /* ========================== */
 /* Tool page */
@@ -1018,6 +1015,7 @@
   background-color: #262323;
   padding: 40px 20px;
   text-align: center;
+  margin-top: -20px;
 }
 
 .city-links-title {
@@ -1025,6 +1023,7 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
+  letter-spacing: 2%;
   color: #FFFFFF;
 }
 
