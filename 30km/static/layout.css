@@ -1409,12 +1409,14 @@ td {
   margin-top: -80px;
   z-index: 1;
   position: relative;
+  max-width: 700px;
   
 }
 
 .frame {
   position: absolute; /* Keep only one position */
-  top: 50px;
+  max-width: 1250px;
+  top: 55px;
   left: 51%; /* center it */
   transform: translateX(-50%);
   background: #E68A5E;
@@ -1444,6 +1446,7 @@ td {
   z-index: 3;
   position: relative; /* so z-index works */
   margin-left: -250px;
+  max-width: 800px;
 }
 
 .frame2 {
