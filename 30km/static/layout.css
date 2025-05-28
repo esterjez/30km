@@ -675,7 +675,7 @@
 .hero3-section {
   background-color: #7CB690;
   width: 100%;
-  max-width: 1440px;
+
   margin: 0 auto;
   height: 309px;
   display: flex;
@@ -734,7 +734,6 @@
 .body6-content {
   background: #7CB690;
   width: 100%;
-  max-width: 1440px;
   padding: 32px 90px;  /* matches your left/top spacing */
   box-sizing: border-box;
   min-height: 285px;  /* fixed height for consistency */
@@ -770,7 +769,6 @@
 .body7-content {
   background: #7CB690;
   width: 100%;
-  max-width: 1440px;
   padding: 88px 90px 64px 90px;
   box-sizing: border-box;
 }
@@ -813,7 +811,7 @@
 .body8-content {
   background: #7CB690;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1600px;
   min-height: 805px;
   position: relative;
   box-sizing: border-box;
