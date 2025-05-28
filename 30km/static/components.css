@@ -91,7 +91,6 @@
 /* --- Video Section --- */
 .video1-section {
     width: 100%;
-    max-width: 1440px;
     height: 263px;
     background-color: #262323;
     overflow: hidden;
