@@ -152,28 +152,56 @@
   <div class="h10-grid">
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-      <p class="p2">Slower Speeds, Safer Streets</p>
-      <p class="p3">
+      <p class="p12">Slower Speeds, Safer Streets</p>
+      <p class="p13">
         The introduction of the 30 km/h speed limit in Madrid aimed to improve road safety, particularly for vulnerable road users such as pedestrians and cyclists.<br>
         
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
-      <p class="p2">Promotion of Active Mobility</p>
-      <p class="p3">
+      <p class="p12">Promotion of Active Mobility</p>
+      <p class="p13">
         The 30 km/h speed limit has encouraged the use of active transportation modes. Madrid has expanded its cycling infrastructure, including shared car-bike lanes, combined pedestrian-bike paths, and segregated cycle tracks, making the city more accommodating for cyclists and pedestrians.<br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
-      <p class="p2">Environmental improvements</p>
-      <p class="p3">
+      <p class="p12">Environmental improvements</p>
+      <p class="p13">
         Lower speed limits contribute to environmental benefits. On average, cities have observed an 18% decrease in emissions, a 2.5 dB reduction in noise pollution, and a 7% drop in fuel consumption following the implementation of 30 km/h zones.
       </p>
     </div>
   </div>
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      About pilot project:
+      <a href="https://ipmba.org/blog/comments/madrid-slashes-speed-limits-and-puts-police-on-bikes" target="_blank">
+        Madrid Slashes Speed Limits, and Puts Police on Bikes
+      </a> 
+    </p>
+    <p3>
+      Actions taken:
+      <a href="https://urban-mobility-observatory.transport.ec.europa.eu/news-events/news/madrid-cuts-speed-limit-and-announces-new-rules-roads-2018-10-29_en" target="_blank">
+        Madrid cuts speed limit and announces new rules on roads
+      </a> 
+    </p>
+    <p3>
+      Outcomes:
+      <a href="https://www.surinenglish.com/spain/speed-limits-towns-20220517101946-nt.html" target="_blank">
+        New speed limits in Spain's towns and cities have reduced traffic deaths by 14%, says the DGT
+      </a> 
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -190,4 +218,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

@@ -144,30 +144,52 @@
 <div class="h10-grid">
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-    <p class="p2">Fewer Accidents</p>
-    <p class="p3">
+    <p class="p12">Fewer Accidents</p>
+    <p class="p13">
       Between 22 September and 21 October 2020, road accidents in Bilbao dropped by 22.9% compared to the same period in 2019. This early result highlights how quickly lower speed limits can have a real-world impact on traffic safety, reducing both the frequency and severity of collisions across the city.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
-    <p class="p2">Better Driver Behavior</p>
-    <p class="p3">
+    <p class="p12">Better Driver Behavior</p>
+    <p class="p13">
       The number of fines for red light violations decreased by 46.6%, indicating that drivers are not only slowing down but also becoming more cautious and law-abiding. This behavioral change supports safer and more respectful interactions between drivers, pedestrians, and cyclists.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
-    <p class="p2">Monitoring and Planning</p>
-    <p class="p3">
+    <p class="p12">Monitoring and Planning</p>
+    <p class="p13">
       The city actively monitors traffic safety, air quality, and noise levels to evaluate the effectiveness of the 30 km/h policy. This data-driven approach helps Bilbao make targeted improvements and ensures the policy continues to deliver long-term health and mobility benefits for residents.
     </p>
   </div>
 </div>
-
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      Actions taken:
+      <a href="https://www.polisnetwork.eu/news/bilbao-wins-2021-eu-road-safety-award/" target="_blank">
+        Bilbao wins 2021 EU Road Safety Award
+      </a>
+    </p>
+    <p3>
+      Outcomes:
+      <a href="https://eurocities.eu/latest/bilbao-slow-and-steady-for-the-win/" target="_blank">
+        Bilbao: Slow and steady for the win
+      </a> 
+    </p>
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -184,4 +206,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

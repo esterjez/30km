@@ -150,31 +150,53 @@
   <div class="h10-grid">
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-      <p class="p2">Accidents Down</p>
-      <p class="p3">
+      <p class="p12">Accidents Down</p>
+      <p class="p13">
         Road accidents dropped by 25%, with a 40% decrease in serious and fatal injuries. <br>
         <span class="source">(Source: Paris City Hall)</span>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
-      <p class="p2">Less Noise</p>
-      <p class="p3">
+      <p class="p12">Less Noise</p>
+      <p class="p13">
         Residential noise levels fell by 2–3 dB, significantly improving comfort. <br>
         <span class="source">(Source: opendata.paris.fr)</span>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
-      <p class="p2">More Cycling</p>
-      <p class="p3">
+      <p class="p12">More Cycling</p>
+      <p class="p13">
         Cycling increased by 60% between 2019 and 2022, in parallel with 30 km/h zones and expansion of bike infrastructure. <br>
         <span class="source">(Source: European Data Journalism)</span>
       </p>
     </div>
-
   </div>
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      About public consultations:
+      <a href="https://www.polisnetwork.eu/news/paris-implements-30-km-per-hour-speed-limit/" target="_blank">
+        Paris extends 30 km/h speed limit to most city streets
+      </a> Paris joins Brussels, Bilbao and other European cities in limiting speed to 30 kilometers per hour in most streets, taking concrete steps to improve road safety and reduce pollution.
+    </p>
+    <p3>
+      Outputs:
+      <a href="https://www.nrso.ntua.gr/geyannis/wp-content/uploads/geyannis-pc552.pdf" target="_blank">
+        Assessing the effectiveness of 30km/h speed limit in cities
+      </a> 
+  
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -191,4 +213,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

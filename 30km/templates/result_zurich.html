@@ -150,30 +150,58 @@
  <div class="h10-grid">
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-    <p class="p2">Noise Reduction</p>
-    <p class="p3">
+    <p class="p12">Noise Reduction</p>
+    <p class="p13">
       After introducing 30 km/h limits on 400 km of roads, Zurich experienced a drop in traffic noise by 2.4 dB(A) during the day and up to 4.5 dB(A) at night—cutting perceived noise nearly in half. This has had a measurable impact on sleep quality, especially for residents living along busy corridors, and contributes to an overall calmer city atmosphere.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
-    <p class="p2">Improved Safety</p>
-    <p class="p3">
+    <p class="p12">Improved Safety</p>
+    <p class="p13">
       Residents have reported a greater sense of safety on the streets, particularly among pedestrians and cyclists. Lower speeds have reduced the number of dangerous situations at crossings and intersections. The step-by-step introduction of zones allowed the city to adapt based on real-life outcomes and neighborhood-specific needs.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/people.svg') }}" alt="Support icon">
-    <p class="p2">Broad Public Support</p>
-    <p class="p3">
+    <p class="p12">Broad Public Support</p>
+    <p class="p13">
       A city-wide survey revealed strong backing for the policy: 59% of older residents and 54% of women support the introduction of 30 km/h zones. The policy was also approved by public referendum, showing that quieter, safer streets are not just a planning goal—but a community demand.
     </p>
   </div>
 </div>
-
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      Goals and actions taken: 
+      <a href="https://www.eea.europa.eu/publications/outlook-to-2030/reduction-to-30-km-h" target="_blank">
+        Reduction to 30km/h speed limits in Zurich, Switzerland
+      </a> 
+    </p>
+    <p3>
+      Public opinion
+      <a href="https://istp.ethz.ch/news/2024/01/individual-carbon-footprints-a-key-to-equitable-climate-policy1.html" target="_blank">
+        Speed limit 30 in Swiss cities - What do Swiss residents want?
+      </a> 
+    </p>
+    <p3>
+      Outputs: noise reduction
+      <a href="https://www.sciencedirect.com/science/article/pii/S0160412022005785" target="_blank">
+        Lowering urban speed limits to 30 km/h reduces noise annoyance and shifts exposure–response relationships: Evidence from a field study in Zurich
+      </a> 
+    </p>
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -190,4 +218,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

@@ -148,28 +148,43 @@
   <div class="h10-grid">
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-    <p class="p2">More Safety</p>
-    <p class="p3">
+    <p class="p12">More Safety</p>
+    <p class="p13">
       Since the implementation of the 30 km/h limit, Brussels has seen a consistent decrease in the number of accidents, along with a reduction in the severity of injuries. Vulnerable road users such as pedestrians and cyclists benefit most from the lower speeds, which reduce both the likelihood and impact of collisions. Regular speed monitoring at over 80 points across the city has shown improved compliance, making everyday mobility safer and more predictable for all.
     </p>
   </div>
   
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Transportation icon">
-    <p class="p2">Lower Noise</p>
-    <p class="p3">
+    <p class="p12">Lower Noise</p>
+    <p class="p13">
       Noise measurements show a reduction of 1.5 to 4.8 dB(A), a change that is significant in terms of human perception. This decrease is equivalent to cutting perceived traffic noise nearly in half in some areas. The result is a calmer, more pleasant soundscape in residential neighborhoods, improving overall quality of life—especially for those living near busy streets or in dense urban environments.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
-    <p class="p2">Wider Support</p>
-    <p class="p3">
+    <p class="p12">Wider Support</p>
+    <p class="p13">
       With quieter and safer streets, Brussels has laid the groundwork for a shift toward more walking and cycling. The 30 km/h policy is closely tied to the city's wider "Good Move" mobility plan, which promotes cleaner, more sustainable transport. Residents report feeling safer when moving around their neighborhoods, and urban planners are using these insights to expand cycling infrastructure and public space improvements.
     </p>
   </div>
 </div>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      Preparation and outcomes: 
+      <a href="https://urban-mobility-observatory.transport.ec.europa.eu/resources/case-studies/brussels-city-30-changing-mobility-model-calmer-city-safe-roads-and-less-noise_en" target="_blank">
+        Brussels City 30 – changing the mobility model for a calmer city with safe roads and less noise
+      </a> 
+  </div>
+</section>
 
 </section>
 <section class="city-links-section">
@@ -188,4 +203,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

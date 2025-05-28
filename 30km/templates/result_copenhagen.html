@@ -151,30 +151,51 @@
   <div class="h10-grid">
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-      <p class="p2">Slower Speeds, Safer Streets</p>
-      <p class="p3">
+      <p class="p12">Slower Speeds, Safer Streets</p>
+      <p class="p13">
         Pilot areas saw a significant drop in serious accidents, especially those involving cyclists and pedestrians (qualitative data reported by city officials; citywide quantitative statistics forthcoming). <br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
-      <p class="p2">Better air quality</p>
+      <p class="p12">Better air quality</p>
       <br>
       <br>
       <br>
-      <p class="p3">
+      <p class="p13">
         On streets like Bispeengbuen, peak-hour PM₂.₅ was over 10x WHO limits and NO₂ exceeded safe levels 6x—demonstrating the importance of reducing emissions via lower speeds. <br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
-      <p class="p2">Quieter, Calmer Neighborhoods</p>
-      <p class="p3">
+      <p class="p12">Quieter, Calmer Neighborhoods</p>
+      <p class="p13">
         Lower speed limits contribute to a 3 dB(A) reduction in traffic noise, which the Danish EPA links to improved quality of life and reduced health risks.
       </p>
     </div>
   </div>
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      About goals:
+      <a href="https://cphpost.dk/2022-05-25/news/copenhagen-close-in-on-speed-limit-reduction/" target="_blank">
+        Copenhagen closes in on significant speed limit reduction
+      </a> 
+    </p>
+    <p3>
+      <a href="https://www.thelocal.dk/20230418/copenhagen-municipality-cuts-speed-limit-by-10-kilometres-per-hour" target="_blank">
+        Copenhagen Municipality cuts speed limit by 10 kilometres per hour
+      </a> 
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -191,4 +212,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

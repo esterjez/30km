@@ -150,34 +150,63 @@
   <div class="h10-grid">
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-      <p class="p2">Reduced road accidents</p>
-      <p class="p3">
+      <p class="p12">Reduced road accidents</p>
+      <p class="p13">
         One year after implementation, the number of road accidents had decreased by 10%, and the number of serious injuries had decreased by 26% <br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Transportation icon">
-      <p class="p2">Lower speed, Big Impact</p>
-      <p class="p3">
+      <p class="p12">Lower speed, Big Impact</p>
+      <p class="p13">
         On 29 monitored streets, the 85th percentile speed dropped from 40 km/h to 36 km/h. <br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/transportation.svg') }}" alt="Community icon">
-      <p class="p2">Mobility pattern change</p>
-      <p class="p3">
+      <p class="p12">Mobility pattern change</p>
+      <p class="p13">
         Cycling increased from 22% to 37%, and public transport use increased by 6%. <br>
       </p>
     </div>
     <div class="h10-item">
       <img src="{{ url_for('static', filename='icons/nieghborhoods.svg') }}" alt="Neighborhood icon">
-      <p class="p2">Air quality improvement</p>
-      <p class="p3">
+      <p class="p12">Air quality improvement</p>
+      <p class="p13">
         The Low Emission Zone introduced in 2020 resulted in a 52% reduction in soot particles in the city centre.
       </p>
     </div>
   </div>
 </section>
+
+<section class="references-section">
+  <h3 class="references-title">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      About STUMP strategy: 
+      <a href="https://urban-mobility-observatory.transport.ec.europa.eu/resources/case-studies/ghents-approach-sustainable-mobility-planning-aligning-regional-and-city-level-sumps_en?">
+        Ghent's approach to sustainable mobility planning: Aligning regional and city-level SUMPs
+      </a> 
+    </p>
+    <p3>
+      About clean mobility: 
+      <a href="https://stad.gent/en/city-governance-organisation/city-policy/ghents-climate-actions/clean-mobility" target="_blank">
+        Clean mobility
+      </a> Here's how Ghent ensures the easy accessibility of the city without compromising the health of its local residents and visitors.
+    </p>
+    <p3>
+      Outcomes:
+      <a href="https://www.metrotime.be/nl/nieuws/een-jaar-zone-30-gentse-binnenstad-snelheid-daalt-en-minder-ongevallen" target="_blank">
+        One year zone 30 in Ghent's city center: speed drops and fewer accidents
+      </a>
+    </p>
+  </div>
+</section>
+
 <section class="city-links-section">
   <h2 class="city-links-title">Explore All City Profiles</h2>
   <div class="city-links">
@@ -194,4 +223,28 @@
     <a href="{{ url_for('result_helsinki') }}">Helsinki</a>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
 {% endblock %}

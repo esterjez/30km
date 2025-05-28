@@ -153,37 +153,75 @@
  <div class="h10-grid">
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/30.svg') }}" alt="30 icon">
-    <p class="p2">Safer Roads</p>
-    <p class="p3">
+    <p class="p12">Safer Roads</p>
+    <p class="p13">
       Between 2016 and 2022, the number of pedestrian and cyclist deaths fell by approximately 75%, contributing to one of the lowest road fatality rates among European capitals. This significant drop shows the long-term effect of sustained speed reduction and prioritizing vulnerable road users.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/community.svg') }}" alt="Community icon">
-    <p class="p2">Calmer Roads</p>
-    <p class="p3">
+    <p class="p12">Calmer Roads</p>
+    <p class="p13">
       Injuries to vulnerable road users fell by almost 30% in areas where lower speed limits were introduced, compared with baseline data from the early 2010s. Slower speeds mean fewer severe collisions and a safer environment for everyone.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/people.svg') }}" alt="Support icon">
-    <p class="p2">Perceived Safety</p>
-    <p class="p3">
+    <p class="p12">Perceived Safety</p>
+    <p class="p13">
       Residents reported feeling significantly safer, particularly families and older citizens. Lower speeds near schools, parks, and shopping streets have made walking and cycling more appealing and accessible in daily life.
     </p>
   </div>
 
   <div class="h10-item">
     <img src="{{ url_for('static', filename='icons/transport.svg') }}" alt="Enforcement icon">
-    <p class="p2">Smart Enforcement</p>
-    <p class="p3">
+    <p class="p12">Smart Enforcement</p>
+    <p class="p13">
       Helsinki integrates speed enforcement with technology: 70 automatic speed control systems are planned, with 33 already in place by the end of 2023. These tools not only increase compliance but also provide valuable data to evaluate and adjust mobility policies over time.
     </p>
   </div>
-  
 </div>
+
+<section class="references-section">
+  <h3 class="references-title" style="margin-top: 80px;">
+    The following guidance documents can support governments in the design and implementation of traffic calming
+    measures:
+  </h3>
+
+  <div class="sources-frame">
+    <p3>
+      Goals:
+      <a href="https://www.hel.fi/en/news/helsinki-aims-to-improve-traffic-safety-share-your-opinions-on-hazard-spots" target="_blank">
+        Helsinki aims to improve traffic safety
+      </a> 
+    </p>
+    <p3>
+      Streets categorization:
+      <a href="https://vcoe.at/files/vcoe/uploads/Veranstaltungen/2024_01_Verkehrsberuhigung/Helsinki%20speed%20limits_Roni%20Utriainen.pdf" target="_blank">
+        Traffic Safety and Speed Limits in Helsinki
+      </a>
+    </p>
+    <p3>
+      Actions taken:
+      <a href="https://www.hel.fi/en/urban-environment-and-traffic/urban-planning-and-construction/planning-and-building-goals/sustainable-and-smooth-traffic" target="_blank">
+        Sustainable and smooth traffic
+      </a> 
+    </p>
+    <p3>
+      Outcomes:
+      <a href="https://www.hel.fi/en/news/no-pedestrian-fatalities-in-helsinki-traffic-last-year" target="_blank">
+        No pedestrian fatalities in Helsinki traffic last year
+      </a> 
+    </p>
+    <p3>
+      <a href="https://www.hel.fi/static/liitteet/kaupunkiymparisto/julkaisut/julkaisut/julkaisu-25-23.pdf" target="_blank">
+        Helsinki Traffic Safety Development Programme 2022–2026: 
+      </a> 
+    </p>
+  </div>
+</section>
 
 </section>
 <section class="city-links-section">
@@ -204,3 +242,26 @@
 </section>
 {% endblock %}
 
+{% block scripts %}
+<script>
+    // Check sessionStorage for city scores
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking sessionStorage for city scores...');
+        const cityScores = JSON.parse(sessionStorage.getItem('cityScores') || '[]');
+        console.log('City scores from sessionStorage:', cityScores);
+        const cityName = '{{ city_name }}';
+        console.log('Current city name:', cityName);
+        const score = cityScores.find(s => s.city.toLowerCase() === cityName);
+        console.log('Found score:', score);
+        if (score) {
+            const accuracyElement = document.querySelector('.match-accuracy-number');
+            console.log('Accuracy element found:', !!accuracyElement);
+            if (accuracyElement) {
+                const accuracy = Math.round(score.similarity * 100);
+                console.log('Setting accuracy to:', accuracy + '%');
+                accuracyElement.textContent = accuracy + '%';
+            }
+        }
+    });
+</script>
+{% endblock %}
