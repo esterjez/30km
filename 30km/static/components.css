@@ -100,7 +100,7 @@
 
 .video-crop {
     position: absolute;
-    top: -370px; /* Shift the video up to crop more from the top */
+    top: -30px; /* Shift the video up to crop more from the top */
     left: 0;
     width: 100%;
     height: auto;
