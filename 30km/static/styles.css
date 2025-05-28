@@ -40,7 +40,7 @@ body {
     align-items: center;
     gap: 30px;
     position: absolute;
-    left: 890px; /* Matches 'Home' position */
+    left: 60%; /* Matches 'Home' position */
     top: 14px;
 }
 
