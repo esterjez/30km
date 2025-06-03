@@ -1021,10 +1021,10 @@
 /* TEMPORARY FOR RESULT PAGES DISPLAY*/
 /* ========================== */
 .city-links-section {
-  background-color: #262323;
-  padding: 40px 20px;
+  background-color: #7CB690;
+  padding-bottom: 50px;
   text-align: center;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
 .city-links-title {
@@ -1033,7 +1033,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: 2%;
-  color: #FFFFFF;
+  color: #F2D975;
 }
 
 .city-links {
@@ -1045,7 +1045,7 @@
 
 .city-links a {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #FFFFFF;
   text-decoration: none;
